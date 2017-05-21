@@ -1,0 +1,43 @@
+$primary: #006699;
+
+ .btn_style{
+  color: white;
+  background-color: #0033cc;
+  font-size: 30px;
+}
+
+p{
+  font-size: 20px;
+}
+
+hr{
+	margin-top: 100px;
+}
+
+span{
+    border-style: solid;
+    border-color: #0000ff;
+    margin: .5rem;
+    padding: 3rem;
+    font-size: 1.5rem;
+} 
+ 
+span:hover{
+  background-color: #6684e0;
+}
+
+span:active{
+  color: black;
+  background-color: #99adea;
+}
+
+h2 {
+	color: $primary;
+	margin-bottom: 100px;
+}
+
+ul {
+	list-style: none;
+}
+
+
