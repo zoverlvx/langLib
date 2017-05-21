@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 
+//this component will change the information displayed
+// based on the information as passed down by the action in the
+// event
 class LanguageDetail extends Component {
 	constructor(props) {
 		super(props);
