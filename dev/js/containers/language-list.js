@@ -43,11 +43,7 @@ function mapStateToProps(state) {
 	}
 }
 
-function mapDispatchToProps(dispatch) {
-	return bindActionCreators({selectLanguage: selectLanguage}, dispatch)
-}
-
-export default connect(mapStateToProps, mapDispatchToProps)(LanguageSpanOfBtns);
+export default connect(mapStateToProps)(LanguageSpanOfBtns);
 
 
           		

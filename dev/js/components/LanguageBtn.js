@@ -65,10 +65,6 @@ class ListItems extends Component {
 //component which describes the function of each
 //individual button
 class LanguageBtn extends Component {
-	// constructor(props) {
-	// 	super(props);
-	// 	this.state = {open: false, language: null}
-	// }
 
 	_handleClickBtn(){ 
 this.props.toggleDropdown(this.props.name);
@@ -97,10 +93,16 @@ this.props.toggleDropdown(this.props.name);
 }
 
 
-function mapDispatchToProps(dispatch) {
-	return ({
-		toggleDropdown: () => {dispatch(TOGGLE_DROPDOWN)} 
-	})
+// function mapDispatchToProps(dispatch) {
+// 	return ({
+// 		toggleDropdown: () => ({dispatch: () => (TOGGLE_DROPDOWN)})
+// 	})
+// }
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		toggleDropdown: () => dispatch(toggleDropdown(TOGGLE_DROPDOWN))
+	}
 }
 
 function mapStateToProps(state) {

@@ -10,19 +10,23 @@ import {initialState} from './reducers/dropdown';
 import App from './components/app';
 import {TOGGLE_DROPDOWN, toggleDropdown} from './actions';
 
+// const middlewares = [
+// 	thunk,
+// 	logger()
+// ]
 
-const middlewares = [
-	thunk,
-	logger()
-]
+const middleware = applyMiddleware(thunk);
 
 //getInitialState?
-const store = createStore(allReducers, 
+const store = createStore(
+	allReducers, 
 	compose(
-			applyMiddleware(...middlewares),
-			window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+	middleware,
+	window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 		)
 	);
+
+
 
 // const logger = (store) => (next) => (action) => {
 // 	console.log("Action fired: ", action) 
@@ -88,3 +92,4 @@ ReactDOM.render(
 // const dom =  document.getElementById('app');  
 // store$.subscribe((state) =>  
 //     ReactDOM.render(<App {...state} />, dom));
+

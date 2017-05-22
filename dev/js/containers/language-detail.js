@@ -14,7 +14,7 @@ class LanguageDetail extends Component {
 
 	render() {
 		//clueless at this point
-		console.log("Here is LanguageDetail ", this.props.name) 
+		//console.log("Here is LanguageDetail ", this.props.name) 
 
 		if(!this.props.language) {
 			return (<h2>Please, select a language.</h2>)
