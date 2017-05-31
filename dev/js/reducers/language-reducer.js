@@ -5,7 +5,6 @@
 export default function() {
 	return [
 		{
-			id: "fr",
 			name: "French",
 			greeting: "Bonjour",
 			pronouns: {
@@ -23,7 +22,6 @@ export default function() {
 			}
 		},
 		{
-			id: "de",
 			name: "German",
 			greeting: "Hallo",
 			pronouns: {
@@ -40,7 +38,6 @@ export default function() {
 			}
 		},
 		{
-			id: "ru",
 			name: "Russian",
 			greeting: "Привет",
 			pronouns: {
