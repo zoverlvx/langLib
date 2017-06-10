@@ -9,6 +9,14 @@ export const toggleDropdown = (nextLanguage) => {
 	}
 }
 
+export const CHANGE_PART_OF_SPEECH = "CHANGE_PART_OF_SPEECH";
+export const changePartOfSpeech = (partOfSpeech) => {
+	return {
+		type: CHANGE_PART_OF_SPEECH,
+		partOfSpeech
+	}
+}
+
 //btnContainer creates the three buttons
 //btn onClick shows the dropdownul
 //dropdownul shows the li

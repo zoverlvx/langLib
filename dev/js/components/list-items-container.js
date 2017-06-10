@@ -10,21 +10,16 @@ class ListItemsContainer extends Component {
 		super(props)
 	}
 
-	handleClick(e) {
-	e.preventDefault(); 
-	console.log("handleClick is working")
-	//this.props.dispatch(toggleDropdown(this.props.language))
- 
-}
+
 
 	createParams() { 
-//param needs a better name
-		return this.props.liReducer.map((li, i) => {
-			
+		let partsOfSpeech = ["Pronouns", "Ordinal and Cardinal Numbers", "Regular Verb Conjugations"];
+
+		return partsOfSpeech.map((partOfSpeech, i) => {
+			console.log("Here is the this that we want", this); 
 				return (
-					<LanguageAspect 
-					displayAspect={this.displayAspect.bind(this)} 
-					items={li} 
+					<LanguageAspect  
+					items={partOfSpeech} 
 					key={i} 
 					/>
 					);

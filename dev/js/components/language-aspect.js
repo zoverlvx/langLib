@@ -1,4 +1,6 @@
 import React from 'react';
+import { changePartOfSpeech } from '../actions';
+
 
 const styles = {
 	container: {
@@ -11,10 +13,16 @@ const styles = {
 
 //in css will take an id for to show this onClick from the LanguageBtn
 
-const LanguageAspect = (props) => {
-	return (
-		<li style={styles.container} key={props.id} onClick={props.displayAspect}>{props.items}</li>
-		);
+const LanguageAspect = (props) => (
+		
+		<li style={styles.container} key={props.id} onClick={props.}>{props.items}</li>
+		
+	);
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		changePartOfSpeech: (partOfSpeech) => dispatch(changePartOfSpeech(partOfSpeech))
+	}
 }
 
-export default LanguageAspect;
+export default connect(mapDispatchToProps)(LanguageAspect);

@@ -1,6 +1,7 @@
 export const initialState = {
 	open: false,
-	language: null
+	language: null,
+	partOfSpeech: null
 }
 //main state of the button component
 //displays the dropdown menu when true
@@ -33,6 +34,9 @@ export default (state = initialState, action) => {
 					language: action.nextLanguage
 				} 
 			}
+		case 'CHANGE_PART_OF_SPEECH':
+			return Object.assign({}, state, {partOfSpeech: action.partOfSpeech})
+
 		default:
 			return state;
 	}
