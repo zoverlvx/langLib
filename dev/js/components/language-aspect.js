@@ -11,11 +11,10 @@ const styles = {
 
 //in css will take an id for to show this onClick from the LanguageBtn
 
-const ListItems = (props) => {
-	console.log("Here is children", props.children)
+const LanguageAspect = (props) => {
 	return (
-		<li style={styles.container} key={props.id} onClick={props.handleClick}>{props.items}</li>
+		<li style={styles.container} key={props.id} onClick={props.displayAspect}>{props.items}</li>
 		);
 }
 
-export default ListItems;
+export default LanguageAspect;

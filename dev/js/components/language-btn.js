@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { connect } from 'react-redux';
 import { toggleDropdown, TOGGLE_DROPDOWN, initialState } from '../actions';
-import ListItems from './list-items';
+import LanguageAspect from './language-aspect';
 import ListItemsContainer from './list-items-container';
 
 
@@ -10,22 +10,16 @@ import ListItemsContainer from './list-items-container';
 //individual button
 class LanguageBtn extends Component {
 
-	_handleClickBtn(){ 
-console.log("After click", this.props.language);
-this.props.toggleDropdown(this.props.language); //<--
-console.log("_handleClickBtn is working") 
-console.log("___________________________________________");
-console.log("Here is this.props.language", this.props.language); 
-console.log("Here is this.props.name", this.props.name);
-console.log("Here is this.props.languages", this.props.languages);
+	handleClickBtn(){ 	
+		this.props.toggleDropdown(this.props.language); //<--
 	}
 
 	render() {
-		console.log("After render: ", this.props.language);
+	console.log("After render: ", this.props.language);
 		return (
 			<div>
 				<span 
-				onClick={this._handleClickBtn.bind(this)}
+				onClick={this.handleClickBtn.bind(this)}
 				> {this.props.name}	
 				</span>
 				<ListItemsContainer />
@@ -45,7 +39,7 @@ console.log("Here is this.props.languages", this.props.languages);
 
 const mapDispatchToProps = (dispatch) => {
 	return {
-		toggleDropdown: () => dispatch(toggleDropdown(TOGGLE_DROPDOWN))
+		toggleDropdown: (nextLanguage) => dispatch(toggleDropdown(nextLanguage))
 	}
 }
 
@@ -59,6 +53,6 @@ const mapStateToProps = (state) => {
 
 
 export default connect(
-mapStateToProps, mapDispatchToProps)(LanguageBtn, ListItems);
+mapStateToProps, mapDispatchToProps)(LanguageBtn, LanguageAspect);
 //do I need to connect ListItems even though it's already in LanguageBtn?
 //I think I need to connect mapDispatchToProps to this???

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ListItems from './list-items';
+import LanguageAspect from './language-aspect';
 
 //the dropdown list component
 //the container for the li
@@ -22,8 +22,8 @@ class ListItemsContainer extends Component {
 		return this.props.liReducer.map((li, i) => {
 			
 				return (
-					<ListItems 
-					handleClick={this.handleClick.bind(this)} 
+					<LanguageAspect 
+					displayAspect={this.displayAspect.bind(this)} 
 					items={li} 
 					key={i} 
 					/>
@@ -45,8 +45,3 @@ export default ListItemsContainer;
 
 
 
-//btnContainer creates the three buttons
-//btn onClick shows the dropdownul
-//dropdownul shows the li
-//dropdownli onClick dependent upon id will generate the content of the displayinfo 
-//displayinfo

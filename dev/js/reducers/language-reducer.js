@@ -25,6 +25,7 @@ export default function() {
 			name: "German",
 			greeting: "Hallo",
 			pronouns: {
+				name: "Die Pronomen",
 				nom: ["ich", "wir", "du", "ihr", "Sie", "Sie", "er, sie, es", "sie"],
 				acc: ["mich", "uns", "dich", "euch", "Sie", "Sie", "ihn, sie, es", "sie"],
 				dat: ["mir", "uns", "dir", "euch", "Ihnen", "Ihnen", "ihm, ihr, ihm", "ihnen"],

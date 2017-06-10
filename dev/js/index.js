@@ -26,8 +26,6 @@ const store = createStore(
 		)
 	);
 
-
-
 // const logger = (store) => (next) => (action) => {
 // 	console.log("Action fired: ", action) 
 // 	next(action);
