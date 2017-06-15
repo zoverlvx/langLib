@@ -35,17 +35,6 @@ class LanguageBtnCreator extends Component {
 		});
 	}
 
-	// createBtns() {
-	// 	return this.props.languages.map((language, i) => {
-	// 		return (
-	// 				<LanguageBtn
-	// 				key={i}
-	// 				>{language.name}
-	// 				</LanguageBtn>
-	// 			)
-	// 	})
-	// }
-
 	render() {
 		return (
 			<div style={styles.container}>{this.createBtns()}</div>
@@ -59,9 +48,7 @@ function mapStateToProps(state) {
 	}
 }
 
-//todo
-//could get rid of language.id
-//
+//I think I still need to bind my actions together
 
 export default connect(mapStateToProps)(LanguageBtnCreator);
 

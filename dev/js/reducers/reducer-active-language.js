@@ -9,3 +9,6 @@ export default function(state = null, action) {
 	}
 	return state;
 }
+
+//bindActionCreators is probably going to need
+//to be involved

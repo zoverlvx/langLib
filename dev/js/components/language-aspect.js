@@ -1,5 +1,6 @@
 import React from 'react';
 import { changePartOfSpeech } from '../actions';
+import { connect } from 'react-redux';
 
 
 const styles = {
@@ -8,21 +9,11 @@ const styles = {
 	}
 }
 
-//dumb component which simply displays the name of a list item
-//in the dropdown
+//trying to figure out the onClick. Is this being placed on the container?
 
-//in css will take an id for to show this onClick from the LanguageBtn
-
-const LanguageAspect = (props) => (
-		
-		<li style={styles.container} key={props.id} onClick={props.}>{props.items}</li>
-		
+const LanguageAspect = (props) => (		
+		<li style={styles.container} key={props.id} onClick={() => props.dispatch(changePartOfSpeech(props.item))}>{props.item}</li>
 	);
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-		changePartOfSpeech: (partOfSpeech) => dispatch(changePartOfSpeech(partOfSpeech))
-	}
-}
+export default connect()(LanguageAspect);
 
-export default connect(mapDispatchToProps)(LanguageAspect);

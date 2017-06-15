@@ -2,29 +2,29 @@ import React, {Component} from "react";
 import { connect } from 'react-redux';
 import { toggleDropdown, TOGGLE_DROPDOWN, initialState } from '../actions';
 import LanguageAspect from './language-aspect';
-import ListItemsContainer from './list-items-container';
+import ListLanguageAspects from './list-language-aspects';
 
 
 
 //component which describes the function of each
 //individual button
-const LanguageBtn = (props) => (
+const LanguageBtn = (props) => {
+	console.log("Here is props in LanguageBtn", props) 
+	return (
 		<div>
-			<span onClick={props.toggleDropdown(props.language)}> 
+			<span onClick={() => props.toggleDropdown(props.language)}> 
 				{props.name}	
 			</span>
-			<ListItemsContainer />
+		{ props.dropdown.open && props.name ? <ListLanguageAspects /> : null }
 		</div>
-	);
+	)
+}
 
+//https://stackoverflow.com/questions/44025468/multiple-dropdown-menu-state
 
-
-//todo
-//research bootstrap: dropdown open, btn_style, btn, dropdown-toggle
-
-// When is it that we want to display the li and the language?
-// How does the dropdown toggle know where to be? What causes that?
-// Look at the flow and composition of the React Components / architecture
+//!!!
+// is this not working because each button knows the state of the other one?
+//!!!
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -35,13 +35,10 @@ const mapDispatchToProps = (dispatch) => {
 const mapStateToProps = (state) => {
 	return {
 		languages: state.languages,
-		dropdown: state.dropdown,
-		liReducer: state.liReducer
+		dropdown: state.dropdown
 	}
 }
 
 
 export default connect(
 mapStateToProps, mapDispatchToProps)(LanguageBtn);
-//do I need to connect ListItems even though it's already in LanguageBtn?
-//I think I need to connect mapDispatchToProps to this???

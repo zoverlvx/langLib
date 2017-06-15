@@ -2,6 +2,9 @@
 //information is mapped to the state dependent upon
 //the events selected upon the dropdown list which is dependent upon
 //the state of the button
+
+
+//alternative reducer below
 export default function() {
 	return [
 		{
@@ -16,9 +19,14 @@ export default function() {
 
 			},
 			numbers: {
-				name: "Les nombres cardinaux et ordinaux",
-				card: ["Un", "Deux", "Trois"],
-				ord: []
+				card: {
+					name: "Les nombres cardinaux: ",
+					nums: ["Un", "Deux", "Trois"]
+				},
+				ord: {
+					name: "Les nombres ordinaux: ",
+					nums: []
+				}
 			}
 		},
 		{
@@ -32,10 +40,15 @@ export default function() {
 				gen: []
 
 			},
-			numbers: {
-				name: "Die Kardinalzahlen und die Ordinalzahlen",
-				card: ["Ein", "Zwei", "Drei"],
-				ord: ["Erst", "Zweite", "Dritte"]
+						numbers: {
+				card: {
+					name: "Die Kardinalzahlen: ",
+					nums: ["Un", "Deux", "Trois"]
+				},
+				ord: {
+					name: "Die Ordinalzahlen: ",
+					nums: ["Erst", "Zweite", "Dritte"]
+				}
 			}
 		},
 		{
@@ -52,22 +65,61 @@ export default function() {
 			},
 			numbers: {
 				card: {
+					name: "",
+					nums: {
 					nom: ["Один", "Два", "Три"],
 					acc: [],
 					dat: [],
 					gen: [],
 					loc: [],
 					ins: []
+					}
+
 			},
 				ord: {
+					name: "",
+					nums: {
 					nom: [],
 					acc: [],
 					dat: [],
 					gen: [],
 					loc: [],
 					ins: []
+					}
+	
 				}
 			}
 		}
 	]
 }
+
+//alternative reducer
+
+// export default function() {
+// 	return [
+// 		{
+// 			name: "French",
+// 			partsOfSpeech: {
+// 				pronouns: "Pronouns",
+// 				numbers: "Numbers",
+// 				verbs: "Verbs"
+// 			}
+// 		},
+// 		{
+// 			name: "German",
+// 				partsOfSpeech: {
+// 				pronouns: "Pronouns",
+// 				numbers: "Numbers",
+// 				verbs: "Verbs"
+// 			}
+// 		},
+// 		{
+// 			name: "Russian",
+// 				partsOfSpeech: {
+// 				pronouns: "Pronouns",
+// 				numbers: "Numbers",
+// 				verbs: "Verbs"
+// 			}
+// 		}
+// 	]
+// }

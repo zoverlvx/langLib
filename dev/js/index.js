@@ -9,7 +9,7 @@ import {initialState} from './reducers/dropdown';
 import App from './components/app';
 
 
-const store = createStore(allReducers);
+const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 
 ReactDOM.render(
