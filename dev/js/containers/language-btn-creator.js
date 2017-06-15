@@ -20,7 +20,7 @@ const styles = {
 }
 
 //just use language={language.name} instead of language={language.id}
-
+//should I just have this handle three separate buttons instead of mapping their creation?
 class LanguageBtnCreator extends Component {
 	
 	createBtns() {
@@ -28,6 +28,7 @@ class LanguageBtnCreator extends Component {
 			return (
 				<LanguageBtn 
 						{...language}
+						value={language.language}
 						key={i} 
 						language={language.name}  
 						/>
