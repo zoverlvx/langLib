@@ -6,7 +6,6 @@ import dropdown from './dropdown';
 //reducers gathered into one
 const allReducers = combineReducers({
 	languages: languageReducer,
-	activeLanguage: activeLanguageReducer,
 	dropdown: dropdown
 });
 

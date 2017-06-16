@@ -21,31 +21,108 @@ class LanguageDetail extends Component {
 			return (<h2>Please, select a language.</h2>)
 		}
 
-		if(this.props.language === "German" && this.props.partsOfSpeech === "Pronouns"){
+		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Pronouns"){
 			return (
 				<div>
-				<h1>{this.props.language.name}</h1>
-				<h3>{this.props.language.pronouns.name}</h3>
-				<hr />
-				<h3>Die Nominativen Pronomen</h3>
-				<p>1st			2nd				3rd</p>
-				<p>{this.props.language.pronouns.nom.map((pronoun) => pronoun + " ")}</p>
+					<h2>{this.props.language[1].pronouns.name}</h2>
+					<h4>Die Nominativen Pronomen</h4>
+					<p>{this.props.language[1].pronouns.nom.map((pronoun) => pronoun + " - ")}</p>
+					<h4>Die Akkusativen Pronomen</h4>
+					<p>{this.props.language[1].pronouns.acc.map((pronoun) => pronoun + " - ")}</p>
+					<h4>Die Dativen Pronomen</h4>
+					<p>{this.props.language[1].pronouns.dat.map((pronoun) => pronoun + " - ")}</p>
+					<h4>Die Genitiven Pronomen:</h4><br />
+					<h4>Als Begleiter</h4>
+					<h5>Nominativ</h5>
+					<p>Maskulinum: {
+						this.props.language[1].pronouns.gen.no_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Neutrum: {
+					this.props.language[1].pronouns.gen.no_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Femininum: {
+						this.props.language[1].pronouns.gen.e_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Plural: {
+					this.props.language[1].pronouns.gen.e_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<h5>Akkusativ</h5>
+					<p>Maskulinum: {
+					this.props.language[1].pronouns.gen.en_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Neutrum: {
+					this.props.language[1].pronouns.gen.no_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Femininum: {
+						this.props.language[1].pronouns.gen.e_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Plural: {
+					this.props.language[1].pronouns.gen.e_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<h5>Dativ</h5>
+					<p>Maskulinum: {
+					this.props.language[1].pronouns.gen.em_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Neutrum: {
+					this.props.language[1].pronouns.gen.em_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Femininum: {
+						this.props.language[1].pronouns.gen.er_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Plural: {
+					this.props.language[1].pronouns.gen.en_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+
+					<h5>Genitiv</h5>
+
+					<p>Maskulinum: {
+					this.props.language[1].pronouns.gen.es_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Neutrum: {
+					this.props.language[1].pronouns.gen.es_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Femininum: {
+						this.props.language[1].pronouns.gen.er_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+					<p>Plural: {
+					this.props.language[1].pronouns.gen.er_ending.map((pronoun) => pronoun + " - ")
+					}
+					</p>
+
 				</div>
 				)
+		} else {
+				return (
+			<div>
+			Display
+			</div>
+		);
+
 		}
 
-		return (
-			<div>
-		{ this.props.language.name }
-			</div>
 
-		);
 	}
 }
 
 function mapStateToProps(state) {
 	return {
-		language: state.activeLanguage
+		language: state.languages,
+		dropdown: state.dropdown
 	}
 }
 

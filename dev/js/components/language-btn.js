@@ -12,7 +12,7 @@ const LanguageBtn = (props) => {
 	console.log("Here is props in LanguageBtn", props) 
 	return (
 		<div>
-			<span value={props.language} onClick={() => props.toggleDropdown(props.language)}> 
+			<span className="btn_span"  value={props.language} onClick={() => props.toggleDropdown(props.language)}> 
 				{props.name}	
 			</span>
 		{ props.dropdown.open && (props.dropdown.language === props.language) ? <ListLanguageAspects /> : null }
