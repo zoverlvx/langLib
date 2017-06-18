@@ -123,12 +123,21 @@ class LanguageDetail extends Component {
 		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers") {
 				return (
 					<div>
-				<h2>{this.props.language[1].numbers.card.name}</h2>
-				<ul>{this.props.language[1].numbers.card.nums.map((num, i) => <li key={i}>{num}</li>)}</ul>
-				<h2>{this.props.language[1].numbers.ord.name}</h2>
-				<ul>{this.props.language[1].numbers.ord.nums.map((num, i) => <li key={i}>{num}</li>)}</ul>
-				<ul></ul>
+				<div className="list">
+				<ul>
+			    	<li id="col_head">{this.props.language[1].numbers.card.name}</li>
+				</ul>
+				{this.props.language[1].numbers.card.nums.map((num, i) => <ul><li key={i}>{num}</li></ul>)}
 				</div>
+
+				<div className="list">
+				<ul>
+					<li id="col_head">{this.props.language[1].numbers.ord.name}</li>
+				</ul>
+				{this.props.language[1].numbers.ord.nums.map((num, i) => <ul><li key={i}>{num}</li></ul>)}
+				</div>
+					</div>
+				
 				);
 			}
 		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Regular Verb Conjugations") {

@@ -9,15 +9,15 @@ import LanguageBtn from '../components/language-btn';
 //and depending on how the two components are connected
 //the key alone will be able to specify what the output will be onClick
 
-const styles = {
-	container: {
-		display: 'flex',
-		flexDirection: 'row',
-		alignItems: 'center',
-		justifyContent: 'space-around',
-		width: '40%'
-	}
-}
+// const styles = {
+// 	container: {
+// 		display: 'flex',
+// 		flexDirection: 'row',
+// 		alignItems: 'center',
+// 		justifyContent: 'space-around',
+// 		width: '40%'
+// 	}
+// } style={styles.container}
 
 //just use language={language.name} instead of language={language.id}
 //should I just have this handle three separate buttons instead of mapping their creation?
@@ -38,7 +38,7 @@ class LanguageBtnCreator extends Component {
 
 	render() {
 		return (
-			<div style={styles.container}>{this.createBtns()}</div>
+			<div>{this.createBtns()}</div>
 		);
 	}
 }

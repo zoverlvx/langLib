@@ -2,7 +2,7 @@
 import React from 'react';
 import LanguageBtnCreator from '../containers/language-btn-creator';
 import LanguageDetail from '../containers/language-detail';
-//require('../../scss/style.css');
+//require('css/style.css');
 
 //main component of the program
 const App = () => (

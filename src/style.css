@@ -1,13 +1,23 @@
-/* generic */
-// trying to use for the tables
-h2 {
-  color: green;
+
+* {
+  margin: 0em;
+  padding: 0em;
 }
 
 body {
   background-color:#eee;
   color:#444;
   font-family:sans-serif;
+  margin: 0em;
+  padding: 0em;
+}
+
+hr {
+  width: 80%;
+}
+
+ul {
+  list-style:none;
 }
 
 .list ul:nth-child(odd) {
@@ -18,26 +28,27 @@ body {
   background-color:#fff;
 }
 
+ #col_head {
+    background-color:#444;
+    color:#fff;
+  }
+
 /* big */
 @media screen and (min-width:600px) {
   
   .list {
     display:table;
-    margin:1em;
+    margin:0em;
   }
  
   .list ul {
     display:table-row;
   }
   
-  .list ul:first-child li {
-    background-color:#444;
-    color:#fff;
-  }
-  
   .list ul > li {
     display:table-cell;
-    padding:.5em 1em;
+    padding: 0em 0em;
+    border: 1px solid red;
   }
   
 }
