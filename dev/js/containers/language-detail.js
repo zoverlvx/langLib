@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 //I need to break the language reducer down into something much more simple
 //Might be best to create View Components for each partOfSpeech for each language
 //then have them display based on LANGUAGE_CHOSEN && PART_OF_SPEECH
+//Pronouns need a better structure. Need to implement a responsive table pattern.
 class LanguageDetail extends Component {
 	constructor(props) {
 		super(props);
@@ -17,11 +18,23 @@ class LanguageDetail extends Component {
 
 	render() {
 
-		if(!this.props.language) {
-			return (<h2>Please, select a language.</h2>)
+		if(this.props.dropdown.language === "French" && this.props.dropdown.partOfSpeech === "Pronouns"){
+			return (
+				<div>French pronouns</div>
+				);
+		}
+		if(this.props.dropdown.language === "French" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers"){
+			return (
+				<div>French numbers</div>
+				);
+		}
+		if(this.props.dropdown.language === "French" && this.props.dropdown.partOfSpeech === "Regular Verb Conjugations"){
+			return (
+				<div>French verbs</div>
+				);
 		}
 
-		if(this.props.dropdown.language === "German / Deutsch" && this.props.dropdown.partOfSpeech === "Pronouns"){
+		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Pronouns"){
 			return (
 				<div>
 					<h2>{this.props.language[1].pronouns.name}</h2>
@@ -107,7 +120,7 @@ class LanguageDetail extends Component {
 				</div>
 				)
 		}
-			if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers") {
+		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers") {
 				return (
 					<div>
 				<h2>{this.props.language[1].numbers.card.name}</h2>
@@ -117,17 +130,36 @@ class LanguageDetail extends Component {
 				<ul></ul>
 				</div>
 				);
+			}
+		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Regular Verb Conjugations") {
+				return(
+					<div>verbs</div>
+					); 
+			}
+		if(this.props.dropdown.language === "Russian" && this.props.dropdown.partOfSpeech === "Pronouns"){
+			return (
+				<div>Russian pronouns</div>
+				);
+		}
+		if(this.props.dropdown.language === "Russian" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers"){
+			return (
+				<div>Russian numbers</div>
+				);
+		}
+		if(this.props.dropdown.language === "Russian" && this.props.dropdown.partOfSpeech === "Regular Verb Conjugations"){
+			return (
+				<div>Russian verbs</div>
+				);
 		} else {
 
 			return (
 			<div>
-			Display
+			<h2>Please, select a language.</h2>
 			</div>
 		);
 
 		}
-}
-
+	}
 }
 
 function mapStateToProps(state) {

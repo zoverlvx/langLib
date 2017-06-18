@@ -8,7 +8,7 @@
 export default function() {
 	return [
 		{
-			name: "French / Français",
+			name: "French",
 			greeting: "Bonjour, tous le monde!",
 			pronouns: {
 				name: "Les Pronoms",
@@ -77,7 +77,7 @@ export default function() {
 			}
 		},
 		{
-			name: "German / Deutsch",
+			name: "German",
 			greeting: "Hallo, alle die Welt!",
 			pronouns: {
 				name: "Die Pronomen",
@@ -128,7 +128,7 @@ export default function() {
 			}
 		},
 		{
-			name: "Russian / Русский",
+			name: "Russian",
 			greeting: "Привет, мир!",
 			pronouns: {
 				name: "Местоимения",
