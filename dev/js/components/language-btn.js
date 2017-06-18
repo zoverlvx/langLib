@@ -18,7 +18,7 @@ const LanguageBtn = (props) => {
 		{ props.dropdown.open && (props.dropdown.language === props.language) ? <ListLanguageAspects /> : null }
 		</div>
 	)
-}
+} //props.language needs a better name because it is kind of confusing
 
 //https://stackoverflow.com/questions/44025468/multiple-dropdown-menu-state
 

@@ -21,7 +21,7 @@ class LanguageDetail extends Component {
 			return (<h2>Please, select a language.</h2>)
 		}
 
-		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Pronouns"){
+		if(this.props.dropdown.language === "German / Deutsch" && this.props.dropdown.partOfSpeech === "Pronouns"){
 			return (
 				<div>
 					<h2>{this.props.language[1].pronouns.name}</h2>
@@ -106,17 +106,28 @@ class LanguageDetail extends Component {
 
 				</div>
 				)
-		} else {
+		}
+			if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers") {
 				return (
+					<div>
+				<h2>{this.props.language[1].numbers.card.name}</h2>
+				<ul>{this.props.language[1].numbers.card.nums.map((num, i) => <li key={i}>{num}</li>)}</ul>
+				<h2>{this.props.language[1].numbers.ord.name}</h2>
+				<ul>{this.props.language[1].numbers.ord.nums.map((num, i) => <li key={i}>{num}</li>)}</ul>
+				<ul></ul>
+				</div>
+				);
+		} else {
+
+			return (
 			<div>
 			Display
 			</div>
 		);
 
 		}
+}
 
-
-	}
 }
 
 function mapStateToProps(state) {
