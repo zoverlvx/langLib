@@ -1,8 +1,8 @@
 import React, {Component} from "react";
-import { connect } from 'react-redux';
-import { toggleDropdown, TOGGLE_DROPDOWN, initialState } from '../actions';
-import LanguageAspect from './language-aspect';
-import ListLanguageAspects from './list-language-aspects';
+import { connect } from "react-redux";
+import { toggleDropdown, TOGGLE_DROPDOWN, initialState } from "../actions";
+import LanguageAspect from "./language-aspect";
+import ListLanguageAspects from "./list-language-aspects";
 
 
 
@@ -11,7 +11,7 @@ import ListLanguageAspects from './list-language-aspects';
 const LanguageBtn = (props) => {
 	console.log("Here is props in LanguageBtn", props) 
 	return (
-		<div>
+		<div className="inline_div" >
 			<span className="btn_span"  value={props.language} onClick={() => props.toggleDropdown(props.language)}> 
 				{props.name}	
 			</span>

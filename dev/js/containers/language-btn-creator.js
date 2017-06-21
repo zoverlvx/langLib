@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {selectLanguage} from '../actions/index'; // <-- double-check if this is being used
+import React, {Component} from "react";
+import {connect} from "react-redux";
+import {selectLanguage} from "../actions/index"; // <-- double-check if this is being used
 //I think it makes more sense to put selectLanguage on the li
 // on the button. It used to be used here when the app was simpler
-import LanguageBtn from '../components/language-btn';
+import LanguageBtn from "../components/language-btn";
 
 //key is going to be very important here
 //and depending on how the two components are connected

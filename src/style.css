@@ -8,8 +8,9 @@ body {
   background-color:#eee;
   color:#444;
   font-family:sans-serif;
-  margin: 0em;
-  padding: 0em;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
 }
 
 hr {
@@ -18,6 +19,31 @@ hr {
 
 ul {
   list-style:none;
+}
+
+.language_aspect {
+  font-size: 12px;
+}
+
+.btn_span {
+  margin-bottom: 2em;
+}
+
+#margin_top {
+  margin: 1em 0em 0em 0em;
+}
+
+#margin_top_bottom {
+  margin: 1em 0em 1em 0em;
+}
+
+#margin_bottom {
+  0em 0em 1em 0em;
+}
+
+.inline_div {
+  display: inline-block;
+  margin: 1em;
 }
 
 .list ul:nth-child(odd) {
@@ -47,8 +73,7 @@ ul {
   
   .list ul > li {
     display:table-cell;
-    padding: 0em 0em;
-    border: 1px solid red;
+    padding: .5em .5em;
   }
   
 }
