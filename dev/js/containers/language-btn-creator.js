@@ -19,8 +19,13 @@ import LanguageBtn from "../components/language-btn";
 // 	}
 // } style={styles.container}
 
-//just use language={language.name} instead of language={language.id}
-//should I just have this handle three separate buttons instead of mapping their creation?
+//React-Router ---------------------------------------------------------------------------------------
+//I believe I want to use NavLink around the button
+//<NavLink to='/:language'/> 
+
+//Do I use render in the NavLink 
+//to get the params.language from the function createBtns?
+// No, I think it needs to be used in the stateless component 
 class LanguageBtnCreator extends Component {
 	
 	createBtns() {

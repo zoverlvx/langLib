@@ -29,6 +29,10 @@ ul {
   margin-bottom: 2em;
 }
 
+.active_btn {
+  font-weight: bold;
+}
+
 #margin_top {
   margin: 1em 0em 0em 0em;
 }

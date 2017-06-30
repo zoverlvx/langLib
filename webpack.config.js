@@ -25,7 +25,9 @@ module.exports = {
     output: {
         path: 'src',
         filename: 'js/bundle.min.js'
+        //publicPath: '/'
     },
+    //devServer: {historyApiFallback: true},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin()
     ]
