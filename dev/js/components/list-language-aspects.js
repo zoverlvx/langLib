@@ -5,6 +5,8 @@ import LanguageAspect from "./language-aspect";
 //the container for the li
 //attributes actions to the li which will then affect the LanguageDetail info
 //creates the entirety of the dropdown menu
+
+//I think I need a switch and a route around the languageAspect
 class ListLanguageAspects extends Component {
 	constructor(props) {
 		super(props)
@@ -18,10 +20,12 @@ class ListLanguageAspects extends Component {
 		return partsOfSpeech.map((partOfSpeech, i) => {
 			console.log("Here is the this that we want", this); 
 				return (
+					<div>
 					<LanguageAspect  
 					item={partOfSpeech} 
 					key={i} 
 					/>
+					</div>
 					);
 		});
 	}
