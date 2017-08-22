@@ -11,7 +11,6 @@ import ListLanguageAspects from "./list-language-aspects";
 
 //need a default for / when language is false/unclicked
 const LanguageBtn = (props) => {
-	console.log("Here is props in LanguageBtn", props) 
 	return (
 		<div className="inline_div" >
 			<span className="btn_span"  

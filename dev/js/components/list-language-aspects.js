@@ -11,15 +11,11 @@ class ListLanguageAspects extends Component {
 	constructor(props) {
 		super(props)
 	}
-
-
-
 	createParams() { 
 		let partsOfSpeech = ["Pronouns", "Ordinal and Cardinal Numbers", "Regular Verb Conjugations"];
 
 		return partsOfSpeech.map((partOfSpeech, i) => {
-			console.log("Here is the this that we want", this); 
-				return (
+			return (
 					<div>
 					<LanguageAspect  
 					item={partOfSpeech} 

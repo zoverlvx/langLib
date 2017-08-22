@@ -10,10 +10,30 @@ import { Link } from "react-router-dom";
 //lolz
 //match.params.language and match.params.part-of-speech ???
 const LanguageAspect = (props) => (	
-		<Link to={`/${props.name}/${props.id}`}>
-		<li className="language_aspect"  key={props.id} onClick={() => props.dispatch(changePartOfSpeech(props.item))}><Link to={`/${props.language}/${props.item}`}>{props.item}</Link></li>
-		</Link>
-	);
+		<li className="language_aspect"  
+		key={props.id} 
+		onClick={() => props.dispatch(changePartOfSpeech(props.item))}>
+		<Link to={`/${props.dropdown}/${props.item}`}>{props.item}</Link>
+		</li>
+		);
 
-export default connect()(LanguageAspect);
+	// const LanguageAspect = (props) => {	
+	// console.log("Here is props from LanguageAspect", props) 
+	// //console.log("Here is props.dropdown.language from LanguageAspect", props.dropdown.language)
+	// return (
+	// 	<li className="language_aspect"  
+	// 	key={props.id} 
+	// 	onClick={() => props.dispatch(changePartOfSpeech(props.item))}>
+	// 	<Link to={`/${props.dropdown.language}/${props.item}`}>{props.item}</Link>
+	// 	</li>
+	// 	);
+	// }
+
+function mapStateToProps(state) {
+	return {
+		dropdown: state.dropdown.language
+	}
+}
+
+export default connect(mapStateToProps)(LanguageAspect);
 

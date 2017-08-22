@@ -1,22 +1,13 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 
-//this component will change the information displayed
-// based on the information as passed down by the action in the
-// event
-
-//this has gotten convoluted again
-//I think that I'm witnessing the limits of the language reducer as a database
-//I need to break the language reducer down into something much more simple
-//Might be best to create View Components for each partOfSpeech for each language
-//then have them display based on LANGUAGE_CHOSEN && PART_OF_SPEECH
-//Pronouns need a better structure. Need to implement a responsive table pattern.
 class LanguageDetail extends Component {
 	constructor(props) {
 		super(props);
 	} 
 
 	render() {
+		console.log("Here is this.props", this.props) 
 		const lImparfait = "L'imparfait";
 
 		if(this.props.dropdown.language === "French" && this.props.dropdown.partOfSpeech === "Pronouns"){
