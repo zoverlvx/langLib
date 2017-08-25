@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
-import { toggleDropdown, TOGGLE_DROPDOWN, initialState } from "../actions";
+import { toggleDropdown } from "../actions";
 import LanguageAspect from "./language-aspect";
 import ListLanguageAspects from "./list-language-aspects";
 
@@ -10,15 +10,16 @@ import ListLanguageAspects from "./list-language-aspects";
 //individual button
 
 //need a default for / when language is false/unclicked
+// Line 19 is a no op
 const LanguageBtn = (props) => {
 	return (
-		<div className="inline_div" >
+		<div className="inline_div">
 			<span className="btn_span"  
-			value={props.language} 
-			onClick={() => props.toggleDropdown(props.language)}> 
-				<Link to={`/${props.name}`}>{props.name}</Link>
+			value={props.name} 
+			onClick={() => props.toggleDropdown(props.name)}> 
+				<Link to={`/${props.url_name}`}>{props.name}</Link>
 			</span>
-		{ props.dropdown.open && (props.dropdown.language === props.language) ? <ListLanguageAspects /> : null }
+		{ props.dropdown.open && (props.dropdown.language === props.name) ? <ListLanguageAspects /> : null }
 		</div>
 	)
 } 

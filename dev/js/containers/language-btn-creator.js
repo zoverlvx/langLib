@@ -1,23 +1,19 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {selectLanguage} from "../actions/index"; // <-- double-check if this is being used
-//I think it makes more sense to put selectLanguage on the li
-// on the button. It used to be used here when the app was simpler
+import {selectLanguage} from "../actions/index"; 
 import LanguageBtn from "../components/language-btn";
 import { Link } from "react-router-dom";
 
 class LanguageBtnCreator extends Component {
-	createBtns() {
-		return this.props.languages.map((language, i) => {
+	createBtns() { 
+	console.log("Here is LanguageBtnCreator with this.props.languages", this.props.languages) 
+		return this.props.languages.map((language, i) => { 
 			return (
-				<div>
 				<LanguageBtn 
-						{...language}
-						value={language.language}
-						key={i} 
-						language={language.name}  
-						/>
-				</div>
+						url_name={language.url_name}
+						name={language.name}
+						key={i}
+				/>
 			);
 		});
 	}
@@ -40,5 +36,4 @@ function mapStateToProps(state) {
 
 export default connect(mapStateToProps)(LanguageBtnCreator);
 
-
-          		
+   		

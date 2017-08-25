@@ -4,20 +4,20 @@ import ReactDOM from "react-dom";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
 import {BrowserRouter} from "react-router-dom";
-import {TOGGLE_DROPDOWN, toggleDropdown} from "./actions";
 import allReducers from "./reducers";
-import {initialState} from "./reducers/dropdown";
 import App from "./components/app";
 
 
 const store = createStore(allReducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
-
+console.log(typeof store)
+console.log(store)  
+console.log("Here is store.getState", store.getState()) 
 
 ReactDOM.render(
-	<BrowserRouter>
 	<Provider store={store}>
+	<BrowserRouter>
 		<App />
-	</Provider>
-	</BrowserRouter>, 
+	</BrowserRouter>
+	</Provider>, 
 	document.getElementById('root')
 	);
