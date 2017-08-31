@@ -7,34 +7,29 @@ import {connect} from "react-redux";
 //attributes actions to the li which will then affect the LanguageDetail info
 //creates the entirety of the dropdown menu
 
-//I think I need a switch and a route around the languageAspect
-class ListLanguageAspects extends Component {
-	constructor(props) {
-		super(props)
-	}
-	createParams() { 
+//I believe this is a correct classless example
+
+const ListLanguageAspects = (props) => {
+	function createParams() {
 		let partsOfSpeech = ["Pronouns", "Ordinal and Cardinal Numbers", "Regular Verb Conjugations"];
-
-		return this.props.languages.map((grab, i) => {
+		return props.languages.map((grab, i) => {
 			return (
-					<div key={i}>
-					<LanguageAspect  
-					item={partsOfSpeech[i]} 
-					key={i} 
-					url_name={grab.url_name}
-					/>
-					</div>
-					);
+				<LanguageAspect
+				item={partsOfSpeech[i]}
+				url_aspect={partsOfSpeech[i].toLowerCase()}
+				key={i}
+				url_name={grab.url_name}
+				/>
+				);
 		});
-	}
+	}	
 
-	render() {
-		return (
+	return (
 		<ul>
-		{this.createParams()}
+		{createParams()}
 		</ul>
 		);
-	}
+
 }
 
 function mapStateToProps(state) {

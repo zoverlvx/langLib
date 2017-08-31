@@ -1,19 +1,57 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {Link, Route} from "react-router-dom";
+import {withRouter, Link, Route} from "react-router-dom";
 
 
 //pretty sure I need to use Link in here somehow
 
 //<Link to={`${match.params.language}/{match.params.part-of-speech}`}></Link>
 
-const LanguageDetail = () => (
-	<p>Hello</p>
-	);
+//this.props.match.params.language[0].pronouns.sub[0]
 
-export const RoutedLanguageDetail = () => (
-	<Route exact path="French/Pronouns" component={LanguageDetail} />
-	);
+//should break these down into separate components e.g. FrenchPronouns, FrenchNumbers, etc, just to tidy up.
+//I think my if statements will depend upon the state of the router more than the redux. I think the router will get its
+//cues from redux and the router will make the changes accordingly. That said, I believe that I need to fix LanguageAspect and ListLanguageAspects before
+//much change can be made with my if statements.
+
+const FrenchPronouns = () => (
+	<p>Here are French Pronouns</p>
+	)
+
+
+const LanguageDetail = (props) => {
+
+	if (props.location.pathname === "/french/pronouns" && props.dropdown.partOfSpeech === "pronouns") {
+		return <FrenchPronouns />;
+	}
+	// if (props.location.pathname === "/french/ordinal and cardinal numbers" && props.dropdown.partOfSpeech === "ordinal and cardinal numbers") {
+	// 	return <FrenchNumbers />;
+	// }
+	// if (props.location.pathname === "/french/regular verb conjugations" && props.dropdown.partOfSpeech === "regular verb conjugations") {
+	// 	return <FrenchVerbs />;
+	// }
+
+	// if (props.location.pathname === "/german/pronouns" && props.dropdown.partOfSpeech === "pronouns") {
+	// 	return <GermanPronouns />;
+	// }
+	// if (props.location.pathname === "/german/ordinal and cardinal numbers" && props.dropdown.partOfSpeech === "ordinal and cardinal numbers") {
+	// 	return <GermanNumbers />;
+	// }
+	// if (props.location.pathname === "/german/regular verb conjugations" && props.dropdown.partOfSpeech === "regular verb conjugations") {
+	// 	return <GermanVerbs />;
+	// }
+
+	// if (props.location.pathname === "/russian/pronouns" && props.dropdown.partOfSpeech === "pronouns") {
+	// 	return <RussianPronouns />;
+	// }
+	// if (props.location.pathname === "/russian/ordinal and cardinal numbers" && props.dropdown.partOfSpeech === "ordinal and cardinal numbers") {
+	// 	return <RussianNumbers />;
+	// }
+	// if (props.location.pathname === "/russian/regular verb conjugations" && props.dropdown.partOfSpeech === "regular verb conjugations") {
+	// 	return <RussianVerbs />;
+	// }
+}
+
 
 // class LanguageDetail extends Component {
 // 	constructor(props) {
@@ -21,10 +59,12 @@ export const RoutedLanguageDetail = () => (
 // 	} 
 
 // 	render() {
-// 		console.log("Here is this.props", this.props) 
+// 		console.log("Here is this.props.match in Detail", this.props.match) 
+// 		console.log("Here is this.props.location in Detail", this.props.location) 
+// 		console.log("Here is this.props.history in Detail", this.props.history)   
 // 		const lImparfait = "L'imparfait";
 
-// 		if(this.props.dropdown.language === "French" && this.props.dropdown.partOfSpeech === "Pronouns"){
+// 		if(this.props.dropdown.language === "french" && this.props.dropdown.partOfSpeech === "pronouns"){
 // 			return (
 // 				<div>
 // 					<h2 id="margin_top_bottom">{this.props.language[0].pronouns.name}</h2>
@@ -131,7 +171,7 @@ export const RoutedLanguageDetail = () => (
 // 				</div>
 // 				);
 // 		}
-// 		if(this.props.dropdown.language === "French" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers"){
+// 		if(this.props.dropdown.language === "french" && this.props.dropdown.partOfSpeech === "ordinal and cardinal numbers"){
 // 			return (
 // 				<div>
 // 					<h2 id="margin_top_bottom">Les nombres</h2>
@@ -151,7 +191,7 @@ export const RoutedLanguageDetail = () => (
 // 				</div>
 // 				);
 // 		}
-// 		if(this.props.dropdown.language === "French" && this.props.dropdown.partOfSpeech === "Regular Verb Conjugations"){
+// 		if(this.props.dropdown.language === "french" && this.props.dropdown.partOfSpeech === "regular verb conjugations"){
 // 			return (
 // 				<div>
 
@@ -260,7 +300,7 @@ export const RoutedLanguageDetail = () => (
 // 				);
 // 		}
 
-// 		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Pronouns"){
+// 		if(this.props.dropdown.language === "german" && this.props.dropdown.partOfSpeech === "pronouns"){
 // 			return (
 // 				<div>
 // 					<h2 id="margin_top_bottom">{this.props.language[1].pronouns.name}</h2>
@@ -482,7 +522,7 @@ export const RoutedLanguageDetail = () => (
 // 				</div>
 // 				)
 // 		}
-// 		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers") {
+// 		if(this.props.dropdown.language === "german" && this.props.dropdown.partOfSpeech === "ordinal and cardinal numbers") {
 // 				return (
 // 					<div>
 // 					<h2 id="margin_top_bottom">Die Nummer</h2>
@@ -503,7 +543,7 @@ export const RoutedLanguageDetail = () => (
 				
 // 				);
 // 			}
-// 		if(this.props.dropdown.language === "German" && this.props.dropdown.partOfSpeech === "Regular Verb Conjugations") {
+// 		if(this.props.dropdown.language === "german" && this.props.dropdown.partOfSpeech === "regular verb conjugations") {
 // 				return(
 // 					<div>
 // 						<h2 id="margin_top_bottom">{this.props.language[1].verbs.name}</h2>
@@ -670,7 +710,7 @@ export const RoutedLanguageDetail = () => (
 // 					</div>
 // 					); 
 // 			}
-// 		if(this.props.dropdown.language === "Russian" && this.props.dropdown.partOfSpeech === "Pronouns"){
+// 		if(this.props.dropdown.language === "russian" && this.props.dropdown.partOfSpeech === "pronouns"){
 // 			return (
 // 				<div>
 					
@@ -829,7 +869,7 @@ export const RoutedLanguageDetail = () => (
 // 				</div>
 // 				);
 // 		}
-// 		if(this.props.dropdown.language === "Russian" && this.props.dropdown.partOfSpeech === "Ordinal and Cardinal Numbers"){
+// 		if(this.props.dropdown.language === "russian" && this.props.dropdown.partOfSpeech === "ordinal and cardinal numbers"){
 // 			return (
 // 				<div>
 					
@@ -851,7 +891,7 @@ export const RoutedLanguageDetail = () => (
 // 				</div>
 // 				);
 // 		}
-// 		if(this.props.dropdown.language === "Russian" && this.props.dropdown.partOfSpeech === "Regular Verb Conjugations"){
+// 		if(this.props.dropdown.language === "russian" && this.props.dropdown.partOfSpeech === "regular verb conjugations"){
 // 			return (
 // 				<div>
 					
@@ -944,13 +984,13 @@ export const RoutedLanguageDetail = () => (
 // 	}
 // }
 
-function LinkedLanguageDetail({match}){
-	return (
-		<Link to={`${match.params.language}/{match.params.part-of-speech}`}>
- 		<LanguageDetail />
-		</Link>
-		)
-}
+// function LinkedLanguageDetail({match}){
+// 	return (
+// 		<Link to={`${match.params.language}/{match.params.part-of-speech}`}>
+//  		<LanguageDetail />
+// 		</Link>
+// 		)
+// }
 
 function mapStateToProps(state) {
 	return {
@@ -959,4 +999,4 @@ function mapStateToProps(state) {
 	}
 }
 
-//export default connect(mapStateToProps)(LanguageDetail);
+export default withRouter(connect(mapStateToProps)(LanguageDetail));

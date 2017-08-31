@@ -2,11 +2,7 @@
 import React from "react";
 import {Switch, Route} from "react-router-dom";
 import LanguageBtnCreator from "../containers/language-btn-creator";
-//import LanguageDetail from "../containers/language-detail";
-
-const LanguageDetail = () => (
-	<p>Hello</p>
-	);
+import LanguageDetail from "../containers/language-detail";
 
 //main component of the program
 //compare next to language-aspect.js
@@ -22,14 +18,18 @@ const LanguageDetail = () => (
 //do that I'm going to check in, because I don't want to start 
 //tearing things down without a second opinion
 
+
+
 const App = () => (
 	<div>
 	<Switch>
 	<Route path="/" component={LanguageBtnCreator} /> 
 	<Route path="/(:language)" component={LanguageBtnCreator} />
-	</Switch>
 	<Route path="/:language/:part-of-speech" component={LanguageDetail} />
+	</Switch>
 	</div>
 );
 
 export default App;
+
+

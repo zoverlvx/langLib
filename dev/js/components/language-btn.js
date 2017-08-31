@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { toggleDropdown } from "../actions";
 import LanguageAspect from "./language-aspect";
 import ListLanguageAspects from "./list-language-aspects";
@@ -12,21 +12,20 @@ import ListLanguageAspects from "./list-language-aspects";
 //need a default for / when language is false/unclicked
 // Line 19 is a no op
 const LanguageBtn = (props) => {
+	console.log("props.match from LanguageBtn: ", props.match)
+	console.log("props.location from LanguageBtn: ", props.location)
+	console.log("props.history from LanguageBtn: ", props.history)   
 	return (
 		<div className="inline_div">
 			<span className="btn_span"  
 			value={props.name} 
-			onClick={() => props.toggleDropdown(props.name)}> 
+			onClick={() => props.toggleDropdown(props.url_name)}> 
 				<Link to={`/${props.url_name}`}>{props.name}</Link>
 			</span>
-		{ props.dropdown.open && (props.dropdown.language === props.name) ? <ListLanguageAspects /> : null }
+		{ props.dropdown.open && (props.dropdown.language === props.url_name) ? <ListLanguageAspects /> : null }
 		</div>
 	)
 } 
-
-//props.language needs a better name because it is kind of confusing
-
-//https://stackoverflow.com/questions/44025468/multiple-dropdown-menu-state
 
 const mapDispatchToProps = (dispatch) => {
 	return {
@@ -42,5 +41,5 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(
-mapStateToProps, mapDispatchToProps)(LanguageBtn);
+export default withRouter(connect(
+mapStateToProps, mapDispatchToProps)(LanguageBtn));
