@@ -8,11 +8,11 @@ import { withRouter, Link } from "react-router-dom";
 //what is react-router-redux?
 
 const LanguageAspect = (props) => {
-	console.log("props.match from LanguageAspect", props.match)
-	console.log("props.location from LanguageAspect", props.location)
-	console.log("props.history from LanguageAspect", props.history) 
-	console.log("__________________________________________________________")
-	console.log("Here is props.location.pathname: ", props.location.pathname)  
+	//console.log("props.match from LanguageAspect", props.match)
+	//console.log("props.location from LanguageAspect", props.location)
+	//console.log("props.history from LanguageAspect", props.history) 
+	//console.log("__________________________________________________________")
+	//console.log("Here is props.location.pathname: ", props.location.pathname)  
 
 	return (	
 		<li className="language_aspect"  

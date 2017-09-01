@@ -18,14 +18,14 @@ import LanguageDetail from "../containers/language-detail";
 //do that I'm going to check in, because I don't want to start 
 //tearing things down without a second opinion
 
-
+//<Route path="/(:language)" component={ListLanguageAspects} /> ???
 
 const App = () => (
 	<div>
 	<Switch>
 	<Route path="/" component={LanguageBtnCreator} /> 
 	<Route path="/(:language)" component={LanguageBtnCreator} />
-	<Route path="/:language/:part-of-speech" component={LanguageDetail} />
+	<Route path="/(:language)/(:part-of-speech)" component={LanguageDetail} />
 	</Switch>
 	</div>
 );

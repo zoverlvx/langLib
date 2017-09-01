@@ -9,7 +9,6 @@ export default function() {
 	return [
 		{
 			name: "French",
-			url_name: "french",
 			greeting: "Bonjour, tous le monde!",
 			pronouns: {
 				name: "Les pronoms",
@@ -82,7 +81,6 @@ export default function() {
 		},
 		{
 			name: "German",
-			url_name: "german",
 			greeting: "Hallo, alle die Welt!",
 			pronouns: {
 				name: "Die Pronomen",
@@ -138,7 +136,6 @@ export default function() {
 		},
 		{
 			name: "Russian",
-			url_name: "russian",
 			greeting: "Привет, мир!",
 			pronouns: {
 				name: "Местоимения",
