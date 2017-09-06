@@ -3,6 +3,7 @@ import React from "react";
 import {Switch, Route} from "react-router-dom";
 import LanguageBtnCreator from "../containers/language-btn-creator";
 import LanguageDetail from "../containers/language-detail";
+import ListLanguageAspects from "./components/list-language-aspects";
 
 //main component of the program
 //compare next to language-aspect.js
@@ -24,11 +25,22 @@ const App = () => (
 	<div>
 	<Switch>
 	<Route path="/" component={LanguageBtnCreator} /> 
-	<Route path="/(:language)" component={LanguageBtnCreator} />
-	<Route path="/(:language)/(:part-of-speech)" component={LanguageDetail} />
+	<Route path="(:language)" component={LanguageBtnCreator} />
+	<Route path="(:language)/(:part-of-speech)" component={LanguageDetail} />
 	</Switch>
 	</div>
 );
+
+// const App = () => (
+//     <div>
+//     <Route path="/" component={LanguageBtnCreator}>
+//     <Route path="(:language)" component={ListLanguageAspects} />
+//     <Route path="(:language/:part-of-speech)" component={LanguageDetail}/>
+//     </Route>
+//     </div>
+// 	);
+
+//this.props.children?
 
 export default App;
 

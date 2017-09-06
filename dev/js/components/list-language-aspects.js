@@ -18,7 +18,6 @@ const ListLanguageAspects = (props) => {
 				item={partsOfSpeech[i]}
 				url_aspect={partsOfSpeech[i].toLowerCase()}
 				key={i}
-				url_name={grab.url_name}
 				/>
 				);
 		});

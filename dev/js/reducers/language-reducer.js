@@ -12,7 +12,6 @@ export default function() {
 			greeting: "Bonjour, tous le monde!",
 			pronouns: {
 				name: "Les pronoms",
-				url_name: "pronouns",
 				sub: ["je", "nous", "tu", "vous", "il, elle", "ils, elles"],
 				dir: ["me", "nous", "te", "vous", "le, la", "les"],
 				indir: ["me", "nous", "te", "vous", "lui", "leur"],
@@ -25,7 +24,6 @@ export default function() {
 				}
 			},
 			numbers: {
-				url_name: "numbers",
 				card: {
 					name: "Les nombres cardinaux: ",
 					nums: ["0 zéro", "1 un", "2 deux", "3 trois", "4 quatre", "5 cinque", "6 six", "7 sept", "8 huit", "9 neuf", "10 dix",
@@ -49,7 +47,6 @@ export default function() {
 			},
 			verbs: {
 				name: "Les Verbes",
-				url_name: "verbs",
 				er_conjugation: {
 					infinitive: "L\'infinitif:",
 					present: ["je parle", "nous parlons", "tu parles", "vous parlez", "il, elle parle", "ils, elles parlent"],
@@ -84,7 +81,6 @@ export default function() {
 			greeting: "Hallo, alle die Welt!",
 			pronouns: {
 				name: "Die Pronomen",
-				url_name: "pronouns",
 				nom: ["ich", "wir", "du", "ihr", "Sie", "Sie", "er, sie, es", "sie"],
 				acc: ["mich", "uns", "dich", "euch", "Sie", "Sie", "ihn, sie, es", "sie"],
 				dat: ["mir", "uns", "dir", "euch", "Ihnen", "Ihnen", "ihm, ihr, ihm", "ihnen"],
@@ -100,7 +96,6 @@ export default function() {
 					}
 			},
 			numbers: {
-				url_name: "numbers",
 				card: {
 					name: "Die Kardinalzahlen: ",
 					nums: ["0 null", "1 eins", "2 zwei", "3 drei", "4 vier", "5 fünf", "6 sechs", "7 sieben", "8 acht", "9 neun", "10 zehn", 
@@ -121,7 +116,6 @@ export default function() {
 			},
 			verbs: {
 				name: "Die Verben",
-				url_name: "verbs",
 				infinitive: "machen",
 				praesens: ["ich mache", "wir machen", "du machst", "ihr macht", "er, sie, es macht",  "sie machen", "Sie machen"],
 				praesens_perfekt: ["ich habe gemacht", "wir haben gemacht", "du hast gemacht", "ihr habt gemacht", "er, sie, es hat gemacht", "sie haben gemacht", "Sie haben gemacht"],
@@ -139,7 +133,6 @@ export default function() {
 			greeting: "Привет, мир!",
 			pronouns: {
 				name: "Местоимения",
-				url_name: "pronouns",
 				nom: ["я", "мы", "ты", "вы", "он, она, оно", "они"],
 				acc_and_gen: ["меня", "нас", "тебя", "вас", "его, её, его", "иx"],
 				dat: ["мне", "нам", "тебе", "вам", "ему, ей, ему", "им"],
@@ -147,7 +140,6 @@ export default function() {
 				ins: ["мной", "нами", "тобой", "вами", "им, ей, им", "ими"]
 			},
 			numbers: {
-				url_name: "numbers",
 				card: {
 					name: "количественное числительное",
 					nums: {
@@ -187,7 +179,6 @@ export default function() {
 			},
 			verbs: {
 				name: "Глаголы",
-				url_name: "verbs",
 				imperfective: {
 					first_conjugation: {
 					infinitive: "читать",
