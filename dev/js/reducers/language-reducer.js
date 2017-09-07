@@ -207,33 +207,3 @@ export default function() {
 	]
 }
 
-//alternative reducer
-
-// export default function() {
-// 	return [
-// 		{
-// 			name: "French",
-// 			partsOfSpeech: {
-// 				pronouns: "Pronouns",
-// 				numbers: "Numbers",
-// 				verbs: "Verbs"
-// 			}
-// 		},
-// 		{
-// 			name: "German",
-// 				partsOfSpeech: {
-// 				pronouns: "Pronouns",
-// 				numbers: "Numbers",
-// 				verbs: "Verbs"
-// 			}
-// 		},
-// 		{
-// 			name: "Russian",
-// 				partsOfSpeech: {
-// 				pronouns: "Pronouns",
-// 				numbers: "Numbers",
-// 				verbs: "Verbs"
-// 			}
-// 		}
-// 	]
-// }
