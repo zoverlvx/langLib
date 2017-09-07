@@ -1,9 +1,9 @@
 //npm run start 
 import React from "react";
-import {Router, Route} from "react-router-dom";
+import {Switch, Route} from "react-router-dom";
 import LanguageBtnCreator from "../containers/language-btn-creator";
 import LanguageDetail from "../containers/language-detail";
-import ListLanguageAspects from "./components/list-language-aspects";
+import ListLanguageAspects from "../components/list-language-aspects";
 
 //main component of the program
 //compare next to language-aspect.js
@@ -28,15 +28,13 @@ import ListLanguageAspects from "./components/list-language-aspects";
 //     </div>
 // 	);
 
-//I don't know if I like this architecture
-
 const App = () => (
 	<div>
-	<Router>
+	<Switch>
 	<Route path="/" component={LanguageBtnCreator} /> 
 	<Route path="(:language)" component={LanguageBtnCreator} />
 	<Route path="(:language)/(:part-of-speech)" component={LanguageDetail} />
-	</Router>
+	</Switch>
 	</div>
 );
 
