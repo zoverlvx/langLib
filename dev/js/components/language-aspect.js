@@ -3,10 +3,6 @@ import { changePartOfSpeech } from "../actions";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 
-//what is react-router?
-//what is react-router-dom?
-//what is react-router-redux?
-
 const LanguageAspect = (props) => {
 	//console.log("props.match from LanguageAspect", props.match)
 	//console.log("props.location from LanguageAspect", props.location)

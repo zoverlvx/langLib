@@ -5,10 +5,6 @@ import { toggleDropdown } from "../actions";
 import LanguageAspect from "./language-aspect";
 import ListLanguageAspects from "./list-language-aspects";
 
-
-//component which describes the function of each
-//individual button
-
 //need a default for / when language is false/unclicked
 // Line 19 is a no op
 const LanguageBtn = (props) => {
@@ -18,8 +14,8 @@ const LanguageBtn = (props) => {
 	const urlLanguageRoute = props.name.toLowerCase(); 
 	return (
 		<div className="inline_div">
-			<span className="btn_span"  
-			
+			<span 
+			className="btn_span"
 			onClick={() => props.toggleDropdown(urlLanguageRoute)}> 
 				<Link to={`/${urlLanguageRoute}`}>{props.name}</Link>
 			</span>
@@ -28,7 +24,7 @@ const LanguageBtn = (props) => {
 	)
 } 
 
-//Why do I need mapStateToProps and/or mapDispatchToProps
+//Why do I need mapStateToProps and/or mapDispatchToProps 
 // if Provider is providing store to the JSX elements wrapped therein?
 // Store is createStore which is AllReducers which is CombineReducers which is each separate Reducer
 //<Provider store={store}><App /></Provider> 
@@ -48,6 +44,5 @@ const mapStateToProps = (state) => {
 	}
 }
 
-//this is magic
 export default withRouter(connect(
 mapStateToProps, mapDispatchToProps)(LanguageBtn));

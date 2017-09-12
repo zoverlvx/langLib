@@ -1,8 +1,3 @@
-//action and action creator which signals to the reducer
-//to reduce the state to a new state dependent upon the 
-//eventCreators in the JSX
-
-//can change this to CHANGE_LANGUAGE
 export const TOGGLE_DROPDOWN = "TOGGLE_DROPDOWN";
 export const toggleDropdown = (nextLanguage) => {
 	return {

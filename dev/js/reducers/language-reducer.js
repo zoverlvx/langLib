@@ -1,10 +1,3 @@
-//main state of the program
-//information is mapped to the state dependent upon
-//the events selected upon the dropdown list which is dependent upon
-//the state of the button
-
-
-//alternative reducer below
 export default function() {
 	return [
 		{
@@ -206,4 +199,3 @@ export default function() {
 		}
 	]
 }
-
