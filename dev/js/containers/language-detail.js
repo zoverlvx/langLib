@@ -21,8 +21,8 @@ const FrenchPronouns = () => (
 //should LanguageDetail be the child of some component?
 
 const LanguageDetail = (props) => {
-
-	if (props.location.pathname === "/french/pronouns" && props.dropdown.partOfSpeech === "pronouns") {
+    console.log("Here is the props of LanguageDetail: ", props) 
+	if (props.location.pathname === "/french/pronouns") {
 		return <FrenchPronouns />;
 	}
 	

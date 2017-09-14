@@ -9,10 +9,9 @@ const LanguageAspect = (props) => {
 	//console.log("props.history from LanguageAspect", props.history) 
 	//console.log("__________________________________________________________")
 	//console.log("Here is props.location.pathname: ", props.location.pathname)  
-
+    //should Link be in LanguageAspect or in ListLanguageAspects?
 	return (	
 		<li className="language_aspect"  
-		key={props.id} 
 		onClick={() => props.dispatch(changePartOfSpeech(props.url_aspect))}>
 		<Link to={`/${props.dropdown}/${props.url_aspect}`}>{props.item}</Link>
 		</li>
