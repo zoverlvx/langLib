@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<App /> provides a snapshot of App's tree 1`] = `
+<div>
+  <Route
+    component={[Function]}
+    path="/"
+  />
+  <Route
+    component={[Function]}
+    path="(:language)"
+  />
+  <Route
+    component={[Function]}
+    path="(:language)/(:part-of-speech)"
+  />
+</div>
+`;

@@ -1,11 +1,24 @@
 import React from "react";
 import App from "../js/components/app";
-import {shallow} from "enzyme";
+import toJson from "enzyme-to-json";
+import {shallow, mount} from "enzyme";
+
+const component = shallow(<App/ >);
+const tree = toJson(component);
 
 describe("<App />", () => {
 	it("renders 1 <App /> component", () => {
-		const component = shallow(<App />);
+		console.log(tree); 
 		expect(component).toHaveLength(1);
-		console.log(component.instance().props) 
+	});
+
+	it("provides a snapshot of App's tree", () => { 
+		expect(tree).toMatchSnapshot();
+	});
+
+	it("", () => {
+        
 	});
 });
+
+//What ought to be tested
