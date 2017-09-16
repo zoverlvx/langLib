@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LanguageDetail /> provides a snapshot of LanguageDetail's tree 1`] = `
+<Route
+  render={[Function]}
+/>
+`;

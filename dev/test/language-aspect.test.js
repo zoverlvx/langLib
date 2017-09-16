@@ -7,6 +7,12 @@ const component = shallow(<LanguageAspect />);
 const tree = toJson(component);
 
 describe("<LanguageAspect />", () => {
+    const minProps = {
+    	className: "language_aspect",
+    	key: {},
+    	onClick: () => {}
+     	}
+
     it("renders 1 <LanguageAspect /> component", () => {
 		console.log(tree); 
         expect(component).toHaveLength(1);
@@ -15,6 +21,19 @@ describe("<LanguageAspect />", () => {
     it("provides a snapshot of LanguageAspect's tree", () => { 
 	    expect(tree).toMatchSnapshot();
 	});
+
+	it("renders props correctly", () => {
+        expect(
+         	shallow(
+         		<LanguageAspect {...minProps} />
+         	).length 
+         ).toEqual(1); 
+     });
 });
 
 //What ought to be tested
+
+
+
+
+

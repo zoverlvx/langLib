@@ -12,8 +12,8 @@ describe("<LanguageBtnCreator />", () => {
 		expect(component).toHaveLength(1);
 	});
 
-		it("provides a snapshot of LanguageBtnCreator's tree", () => { 
-		    expect(tree).toMatchSnapshot();
+	it("provides a snapshot of LanguageBtnCreator's tree", () => { 
+		expect(tree).toMatchSnapshot();
 	});
 });
 

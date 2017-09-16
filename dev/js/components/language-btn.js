@@ -5,12 +5,14 @@ import { toggleDropdown } from "../actions";
 import LanguageAspect from "./language-aspect";
 import ListLanguageAspects from "./list-language-aspects";
 
-//need a default for / when language is false/unclicked
-// Line 19 is a no op
+//need a default for / when language is false/unclicked -> isomorphism on the backend
 const LanguageBtn = (props) => {
-	//console.log("props.match from LanguageBtn: ", props.match)
-	//console.log("props.location from LanguageBtn: ", props.location)
-	//console.log("props.history from LanguageBtn: ", props.history)  
+	console.log("LanguageBtn: props.match: ", props.match)
+	console.log("LanguageBtn: props.match.params: ", props.match.params) 
+	console.log("LanguageBtn: props.location: ", props.location)
+	console.log("LanguageBtn: props.location.pathname: ", props.location.pathname) 
+	console.log("LanguageBtn: props.history: ", props.history) 
+ 
 	const urlLanguageRoute = props.name.toLowerCase(); 
 	return (
 		<div className="inline_div">

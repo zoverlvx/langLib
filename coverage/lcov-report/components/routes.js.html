@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for components/app.js</title>
+    <title>Code coverage report for components/routes.js</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\prettify.css" />
     <link rel="stylesheet" href="..\base.css" />
@@ -16,7 +16,7 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\index.html">All files</a> / <a href="index.html">components</a> app.js
+      <a href="..\index.html">All files</a> / <a href="index.html">components</a> routes.js
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>1/1</span>
+        <span class='fraction'>2/2</span>
       </div>
     </div>
   </div>
@@ -53,27 +53,57 @@
 8
 9
 10
-11</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">//npm run start 
-import React from "react";
-import {Route} from "react-router-dom";
-import Routes from "../components/routes";
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import React from "react";
+import { Route } from "react-router";
+import {BrowserRouter} from "react-router-dom";
+import LanguageBtnCreator from "../containers/language-btn-creator";
+import LanguageDetail from "../containers/language-detail";
 &nbsp;
-const App = () =&gt; &lt;Routes /&gt;;
+const Routes = () =&gt; {
+	return (
+            &lt;div&gt;
+            &lt;BrowserRouter&gt;
+                &lt;Route path="/" component={LanguageBtnCreator} /&gt; 
+	            &lt;Route path=":language" component={LanguageBtnCreator} /&gt;
+	            &lt;Route path=":language/:part-of-speech" component={LanguageDetail} /&gt;
+	            &lt;/BrowserRouter&gt;
+	        &lt;/div&gt;
+		);
+}
 &nbsp;
-export default App;
 &nbsp;
 &nbsp;
-&nbsp;</pre></td></tr>
+export default Routes</pre></td></tr>
 </table></pre>
 <div class='push'></div><!-- for sticky footer -->
 </div><!-- /wrapper -->

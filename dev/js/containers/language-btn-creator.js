@@ -1,16 +1,13 @@
 import React, {Component} from "react";
-import {connect} from "react-redux";
-import {selectLanguage} from "../actions/index"; 
+import {connect} from "react-redux"; 
 import LanguageBtn from "../components/language-btn";
-import { withRouter, Link } from "react-router-dom";
+//not convinced that I need withRouter to wrap it as I get the same error with or without withRouter
+//Invariant Violation: Could not find "store" in either the context or 
+//props of "Connect(LanguageBtnCreator)". 
+//Either wrap the root component in a <Provider>, 
+//or explicitly pass "store" as a prop to "Connect(LanguageBtnCreator)".
 
 const LanguageBtnCreator = (props) => {
-	console.log("LanguageBtnCreator: props.match: ", props.match)
-	console.log("LanguageBtnCreator: props.match.params: ", props.match.params) 
-	console.log("LanguageBtnCreator: props.location: ", props.location)
-	console.log("LanguageBtnCreator: props.location.pathname: ", props.location.pathname) 
-	console.log("LanguageBtnCreator: props.history: ", props.history)  
-	
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 	//might need history in order to get the routes to work manually
@@ -44,6 +41,6 @@ function mapStateToProps(state) {
 
 //I think I still need to bind my actions together
 
-export default withRouter(connect(mapStateToProps)(LanguageBtnCreator));
+export default connect(mapStateToProps)(LanguageBtnCreator);
 
    		
