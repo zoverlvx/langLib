@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 import { toggleDropdown } from "../actions";
-import LanguageAspect from "./language-aspect";
 import ListLanguageAspects from "./list-language-aspects";
 
 //need a default for / when language is false/unclicked -> isomorphism on the backend
@@ -14,6 +13,7 @@ const LanguageBtn = (props) => {
 	console.log("LanguageBtn: props.history: ", props.history) 
  
 	const urlLanguageRoute = props.name.toLowerCase(); 
+	//props.url_name
 	return (
 		<div className="inline_div">
 			<span 

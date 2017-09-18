@@ -17,7 +17,7 @@ describe("<Routes />", () => {
 		expect(tree).toMatchSnapshot();
 	});
 
-	it("should render the LanguageBtnCreator onload", () => {
+	it("should render the LanguageBtnCreator when visiting /", () => {
         const component = mount(
             <MemoryRouter initialEntries={["/"]} initialIndex={0}>
                 <Routes />
@@ -25,4 +25,13 @@ describe("<Routes />", () => {
         	)
         expect(component.find(Home).length).toBe(1)
 	});
+
+	// it("should render ListLanguageAspects on /:language", () => {
+    // this is currently the main responsibility of Redux
+	// });
+
+    // it("should render LanguageDetail when visiting /:language/:part-of-speech", () => {
+    
+    // });
+
 });

@@ -7,6 +7,8 @@ import LanguageBtn from "../components/language-btn";
 //Either wrap the root component in a <Provider>, 
 //or explicitly pass "store" as a prop to "Connect(LanguageBtnCreator)".
 
+
+//I don't think this needs to be connected to state <-----------------------
 const LanguageBtnCreator = (props) => {
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
@@ -31,7 +33,6 @@ return (
 		</div>
 	);
 }
-
 
 function mapStateToProps(state) {
 	return {

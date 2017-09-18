@@ -6,6 +6,7 @@ import {connect} from "react-redux";
 //I'm not technically using anything from the reducer in this component
 //I wonder if this is at least part of the miscommunication between Redux store and
 //my LanguageDetail component
+
 const ListLanguageAspects = (props) => {
 	function createParams() {
 		let partsOfSpeech = ["Pronouns", "Ordinal and Cardinal Numbers", "Regular Verb Conjugations"];
