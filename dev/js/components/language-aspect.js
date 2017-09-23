@@ -4,16 +4,15 @@ import { connect } from "react-redux";
 import { withRouter, Link } from "react-router-dom";
 
 const LanguageAspect = (props) => {
-	//console.log("props.match from LanguageAspect", props.match)
-	//console.log("props.location from LanguageAspect", props.location)
-	//console.log("props.history from LanguageAspect", props.history) 
-	//console.log("__________________________________________________________")
-	//console.log("Here is props.location.pathname: ", props.location.pathname)  
-    //should Link be in LanguageAspect or in ListLanguageAspects?
+	console.log("LanguageAspect: props.match: ", props.match)
+	console.log("LanguageAspect: props.location: ", props.location)
+	console.log("LanguageAspect: props.history: ", props.history) 
+	console.log("__________________________________________________________")
+	console.log("LanguageAspect: props.location.pathname: ", props.location.pathname)  
 	return (	
 		<li className="language_aspect"  
-		onClick={() => props.dispatch(changePartOfSpeech(props.url_aspect))}>
-		<Link to={`/${props.dropdown}/${props.url_aspect}`}>{props.item}</Link>
+		onClick={() => props.dispatch(changePartOfSpeech(props.urlAspect))}>
+		<Link to={`/${props.dropdown}/${props.urlAspect}`}>{props.item}</Link>
 		</li>
 		);
 }

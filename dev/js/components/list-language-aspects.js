@@ -3,10 +3,6 @@ import { withRouter } from "react-router-dom";
 import LanguageAspect from "./language-aspect";
 import {connect} from "react-redux";
 
-//I'm not technically using anything from the reducer in this component
-//I wonder if this is at least part of the miscommunication between Redux store and
-//my LanguageDetail component
-
 const ListLanguageAspects = (props) => {
 	function createParams() {
 		let partsOfSpeech = ["Pronouns", "Ordinal and Cardinal Numbers", "Regular Verb Conjugations"];
@@ -14,7 +10,7 @@ const ListLanguageAspects = (props) => {
 			return (
 				<LanguageAspect
 				item={partsOfSpeech[i]}
-				url_aspect={partsOfSpeech[i].toLowerCase()}
+				urlAspect={partsOfSpeech[i].toLowerCase()}
 				key={i}
 				/>
 				);
@@ -33,4 +29,4 @@ function mapStateToProps(state) {
 	}
 }
 
-export default withRouter(connect(mapStateToProps)(ListLanguageAspects));
+export default connect(mapStateToProps)(ListLanguageAspects);

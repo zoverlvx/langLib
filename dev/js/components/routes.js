@@ -1,18 +1,21 @@
 import React from "react";
-import { Route } from "react-router";
+import { Route, Switch } from "react-router";
 import LanguageBtnCreator from "../containers/language-btn-creator";
 import LanguageDetail from "../containers/language-detail";
+
+//LanguageDetail should render some kind of display on route / but it doesn't
 
 const Routes = () => {
 	return (
             <div>
-                <Route path="/" component={LanguageBtnCreator} /> 
-	            <Route path=":language" component={LanguageBtnCreator} />
-	            <Route path=":language/:part-of-speech" component={LanguageDetail} />
+               <LanguageBtnCreator /> 
+                <Switch>
+                <Route path="/:language/:partofspeech" component={LanguageDetail} />     
+	            </Switch>
 	        </div>
 		);
 }
 
 
 
-export default Routes
+export default Routes;

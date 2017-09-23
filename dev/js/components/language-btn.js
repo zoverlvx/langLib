@@ -6,11 +6,11 @@ import ListLanguageAspects from "./list-language-aspects";
 
 //need a default for / when language is false/unclicked -> isomorphism on the backend
 const LanguageBtn = (props) => {
-	console.log("LanguageBtn: props.match: ", props.match)
-	console.log("LanguageBtn: props.match.params: ", props.match.params) 
-	console.log("LanguageBtn: props.location: ", props.location)
-	console.log("LanguageBtn: props.location.pathname: ", props.location.pathname) 
-	console.log("LanguageBtn: props.history: ", props.history) 
+	//console.log("LanguageBtn: props.match: ", props.match)
+	//console.log("LanguageBtn: props.match.params: ", props.match.params) 
+	//console.log("LanguageBtn: props.location: ", props.location)
+	//console.log("LanguageBtn: props.location.pathname: ", props.location.pathname) 
+	//console.log("LanguageBtn: props.history: ", props.history) 
  
 	const urlLanguageRoute = props.name.toLowerCase(); 
 	//props.url_name
