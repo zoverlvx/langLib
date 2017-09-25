@@ -1,8 +1,9 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {withRouter, Link, Route} from "react-router-dom";
-import FrenchPronouns from "../components/language-components/french-pronouns";
-import FrenchNumbers from "../components/language-components/french-numbers";
+import FrenchPronouns from "../components/language-components/french/french-pronouns";
+import FrenchNumbers from "../components/language-components/french/french-numbers";
+import FrenchVerbs from "../components/language-components/french/french-verbs";
 
 class LanguageDetail extends Component {
 	constructor(props) {
@@ -13,7 +14,7 @@ class LanguageDetail extends Component {
 		console.log("Here is this.props.match in Detail", this.props.match); 
 		console.log("Here is this.props.location in Detail", this.props.location); 
 		console.log("Here is this.props.history in Detail", this.props.history);   
-		const lImparfait = "L'imparfait";
+		
 
 		if (this.props.location.pathname === "/") {
 			return (
@@ -29,7 +30,6 @@ class LanguageDetail extends Component {
 				);
 		}
 
-		
 		if(this.props.location.pathname === "/french/ordinal and cardinal numbers"){
 			return (
                 <FrenchNumbers />
@@ -38,110 +38,7 @@ class LanguageDetail extends Component {
 
 		if(this.props.location.pathname === "/french/regular verb conjugations"){
 			return (
-				<div>
-
-					<h2 id="margin_top_bottom">Les verbes</h2>
-
-						<div className="list">
-					<ul>
-						<li id="col_head"></li>
-						<li id="col_head">{this.props.language[0].verbs.er_conjugation.infinitive} </li>
-						<li id="col_head">parler</li>
-					</ul>
-
-					<ul>
-						<li id="col_head">Le présent:</li>
-						<li id="col_head"></li>
-						<li id="col_head"></li>
-					</ul>
-
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.present[0]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.present[1]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.present[2]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.present[3]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.present[4]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.present[5]}</li>
-					</ul>
-
-					<ul>
-						<li id="col_head">Le passé composé:</li>
-						<li id="col_head"></li>
-						<li id="col_head"></li>
-					</ul>
-
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.passe_compose[0]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.passe_compose[1]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.passe_compose[2]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.passe_compose[3]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.passe_compose[4]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.passe_compose[5]}</li>
-					</ul>
-
-
-					<ul>
-						<li id="col_head">{lImparfait}:</li>
-						<li id="col_head"></li>
-						<li id="col_head"></li>
-					</ul>
-
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.imparfait[0]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.imparfait[1]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.imparfait[2]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.imparfait[3]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.imparfait[4]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.imparfait[5]}</li>
-					</ul>
-
-					<ul>
-						<li id="col_head">Le futur simple:</li>
-						<li id="col_head"></li>
-						<li id="col_head"></li>
-					</ul>
-
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.futur_simple[0]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.futur_simple[1]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.futur_simple[2]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.futur_simple[3]}</li>
-					</ul>
-					<ul>
-						<li></li>
-						<li>{this.props.language[0].verbs.er_conjugation.futur_simple[4]}</li>
-						<li>{this.props.language[0].verbs.er_conjugation.futur_simple[5]}</li>
-					</ul>
-
-
-						</div>
-
-				</div>
+				<FrenchVerbs />
 				);
 		}
 
