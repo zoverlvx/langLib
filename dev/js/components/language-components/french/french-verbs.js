@@ -116,8 +116,8 @@ const FrenchVerbs = (props) => {
 
 function mapStateToProps(state) {
 	return {
-		language: state.languages,
-		dropdown: state.dropdown
+		language: state.languages
+		//dropdown: state.dropdown
 	}
 }
 
