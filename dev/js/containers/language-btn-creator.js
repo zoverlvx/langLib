@@ -20,7 +20,6 @@ const LanguageBtnCreator = (props) => {
 			//console.log("Here is LanguageBtnCreator with props.languages", props.languages)
 			return (
 				<LanguageBtn
-					url_name={language.url_name}
 					name={language.name}
 					key={i}
 				/>

@@ -11,37 +11,31 @@ import RussianPronouns from "../components/language-components/russian/russian-p
 import RussianNumbers from "../components/language-components/russian/russian-numbers";
 import RussianVerbs from "../components/language-components/russian/russian-verbs";
 
-class LanguageDetail extends Component {
-	constructor(props) {
-		super(props);
-	} 
-
-	render() {
-		console.log("Here is this.props.match in Detail", this.props.match); 
-		console.log("Here is this.props.location in Detail", this.props.location); 
-		console.log("Here is this.props.history in Detail", this.props.history);   
-    
-    return (
-        this.props.location.pathname === "/french/pronouns" ? <FrenchPronouns /> :
-		this.props.location.pathname === "/french/ordinal and cardinal numbers" ? <FrenchNumbers /> :
-	    this.props.location.pathname === "/french/regular verb conjugations" ? <FrenchVerbs /> : 
-	    this.props.location.pathname === "/german/pronouns" ? <GermanPronouns /> : 
-	    this.props.location.pathname === "/german/ordinal and cardinal numbers" ? <GermanNumbers /> : 
-	    this.props.location.pathname === "/german/regular verb conjugations" ? <GermanVerbs /> : 
-	    this.props.location.pathname === "/russian/pronouns" ? <RussianPronouns /> : 
-	    this.props.location.pathname === "/russian/ordinal and cardinal numbers" ? <RussianNumbers /> : 
-	    this.props.location.pathname === "/russian/regular verb conjugations" ? <RussianVerbs /> : null
-    	);
-
-		if (this.props.location.pathname === "/") {
-			return (
-				<div id="margin_top">
-			        <h2>Please, select a language.</h2>
-			    </div>
-			);
-		}
-	}
+const pleaseSelect = () => {
+	return (
+        <div id="margin_top">
+            <h2>Please, select a language.</h2>
+        </div>
+		);
 }
+
+const LanguageDetail = (props) => {
+		console.log("Here is this.props.match in Detail", props.match); 
+		console.log("Here is this.props.location in Detail", props.location); 
+		console.log("Here is this.props.history in Detail", props.history); 
+	return (
+        props.location.pathname === "/french/pronouns" ? <FrenchPronouns /> :
+		props.location.pathname === "/french/ordinal_and_cardinal_numbers" ? <FrenchNumbers /> :
+	    props.location.pathname === "/french/regular_verb_conjugations" ? <FrenchVerbs /> : 
+	    props.location.pathname === "/german/pronouns" ? <GermanPronouns /> : 
+	    props.location.pathname === "/german/ordinal_and_cardinal_numbers" ? <GermanNumbers /> : 
+	    props.location.pathname === "/german/regular_verb_conjugations" ? <GermanVerbs /> : 
+	    props.location.pathname === "/russian/pronouns" ? <RussianPronouns /> : 
+	    props.location.pathname === "/russian/ordinal_and_cardinal_numbers" ? <RussianNumbers /> : 
+	    props.location.pathname === "/russian/regular_verb_conjugations" ? <RussianVerbs /> : 
+	    props.location.pathname === "/" ? <pleaseSelect /> : null
+		);
+};
 
 function mapStateToProps(state) {
 	return {

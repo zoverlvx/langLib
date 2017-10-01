@@ -5,7 +5,6 @@ import {Provider} from "react-redux";
 import {createStore, applyMiddleware} from "redux";
 import {BrowserRouter} from "react-router-dom";
 import allReducers from "./reducers";
-import App from "./components/app";
 import Routes from "./components/routes"
 
 //I do not currently have middleware 

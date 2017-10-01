@@ -3,19 +3,19 @@ import { Route, Switch } from "react-router";
 import LanguageBtnCreator from "../containers/language-btn-creator";
 import LanguageDetail from "../containers/language-detail";
 
-//LanguageDetail should render some kind of display on route / but it doesn't
+//Switch required if multiple routes used
 
 const Routes = () => {
 	return (
             <div>
-               <LanguageBtnCreator /> 
-                <Switch>
-                <Route path="/:language/:partofspeech" component={LanguageDetail} />     
-	            </Switch>
-	        </div>
+                <LanguageBtnCreator />
+                <Route path="/:language/:partofspeech" component={LanguageDetail} />    
+			</div>
+       
 		);
 }
 
 
 
 export default Routes;
+

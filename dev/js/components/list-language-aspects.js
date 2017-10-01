@@ -10,7 +10,7 @@ const ListLanguageAspects = (props) => {
 			return (
 				<LanguageAspect
 				item={partsOfSpeech[i]}
-				urlAspect={partsOfSpeech[i].toLowerCase()}
+				aspectPath={partsOfSpeech[i].toLowerCase().replace(/ /g, "_")}
 				key={i}
 				/>
 				);
