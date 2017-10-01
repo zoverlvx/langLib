@@ -26,12 +26,32 @@ hr {
   width: 80%;
 }
 
-.language_aspect {
+.language_dropdown {
   font-size: 12px;
+  border: 1px solid silver;
+  padding: 6;
+  background-color: white;
+
+}
+
+.btn_link_color {
+  color: white;
 }
 
 .btn_span {
+  display: block;
+  cursor: pointer;
   margin-bottom: 2em;
+  background-color: #0033cc;
+  font-size: 1.5rem;
+  margin: .5rem;
+  padding: 3rem;
+  text-align: center;
+}
+
+//this doesn't work
+.btn_span span:hover{
+  background-color: lighten(#0033cc, 5%)
 }
 
 .active_btn {

@@ -5,7 +5,7 @@ import { withRouter, Link } from "react-router-dom";
 
 const LanguageAspect = (props) => { 
 	return (	
-		<li className="language_aspect"  
+		<li className="language_dropdown"  
 		onClick={() => props.dispatch(changePartOfSpeech(props.aspectPath))}>
 		<Link to={`/${props.dropdown}/${props.aspectPath}`}>{props.item}</Link>
 		</li>
