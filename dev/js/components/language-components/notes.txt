@@ -1,0 +1,2 @@
+Would these better be placed in a json or mongodb database?
+Having these hang out in the front end would be wasteful

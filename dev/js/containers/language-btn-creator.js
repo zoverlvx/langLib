@@ -8,7 +8,7 @@ import LanguageBtn from "../components/language-btn";
 //or explicitly pass "store" as a prop to "Connect(LanguageBtnCreator)".
 
 
-//I don't think this needs to be connected to state <-----------------------
+//technically the languages are coming from a "reducer acting as database"
 const LanguageBtnCreator = (props) => {
 
 	//!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

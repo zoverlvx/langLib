@@ -1,0 +1,17 @@
+This is a useful video: https://www.youtube.com/watch?v=tsEHfL-Ul1Y
+
+BackEnd:
+-Where should I put the server file?
+-Must be isomorphic.
+-Browser routes fail when entered in address bar.
+
+FrontEnd:
+-LanguageDetail behavior must be consistent. Should continue to show even if another language is chosen and should only change when an aspect is chosen. This is likely an issue in the reducer.
+-default pleaseSelect component doesn't show up and I'm stumped.
+
+
+CSS:
+-Btn will not lighten color on hover.
+.btn_span span:hover{
+  background-color: lighten(#0033cc, 5%)
+} doesn't work

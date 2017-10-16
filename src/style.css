@@ -31,7 +31,7 @@ hr {
   border: 1px solid silver;
   padding: 6;
   background-color: white;
-
+  //position: absolute;
 }
 
 .btn_link_color {
@@ -47,6 +47,7 @@ hr {
   margin: .5rem;
   padding: 3rem;
   text-align: center;
+  //position: absolute;
 }
 
 //this doesn't work
@@ -77,37 +78,37 @@ hr {
 
 
 
-// .list ul:nth-child(odd) {
-//   background-color:#ddd;
-// }
+.list ul:nth-child(odd) {
+  background-color:#ddd;
+}
 
-// .list ul:nth-child(even) {
-//   background-color:#fff;
-// }
+.list ul:nth-child(even) {
+  background-color:#fff;
+}
 
-//  #col_head {
-//     background-color:#444;
-//     color:#fff;
-//   }
+ #col_head {
+    background-color:#444;
+    color:#fff;
+  }
 
-// /* big */
-// @media screen and (min-width:600px) {
+/* big */
+@media screen and (min-width:600px) {
   
-//   .list {
-//     display:table;
-//     margin:0em;
-//   }
+  .list {
+    display:table;
+    margin:0em;
+  }
  
-//   .list ul {
-//     display:table-row;
-//   }
+  .list ul {
+    display:table-row;
+  }
   
-//   .list ul > li {
-//     display:table-cell;
-//     padding: .5em .5em;
-//   }
+  .list ul > li {
+    display:table-cell;
+    padding: .5em .5em;
+  }
   
-// }
+}
 
 // /* small */
 // @media screen and (max-width:599px) {

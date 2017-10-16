@@ -1,6 +1,6 @@
-var path = require('path');
-var webpack = require('webpack');
-
+let path = require('path');
+let webpack = require('webpack');
+//This has to be serving something if there's a port associated to it
 module.exports = {
     devServer: {
         inline: true,
