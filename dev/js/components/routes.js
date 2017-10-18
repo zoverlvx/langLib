@@ -15,7 +15,14 @@ const Routes = () => {
 		);
 }
 
-
+// export function createRoutes() {
+// 	return (
+//         <div>
+//             <LanguageBtnCreator />
+//             <Route path="/:language/:partsOfSpeech" component={LanguageDetail} />
+//         </div>
+// 		);
+// }
 
 export default Routes;
 

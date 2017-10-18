@@ -19,10 +19,7 @@ const pleaseSelect = () => {
 		);
 }
 
-const LanguageDetail = (props) => {
-		console.log("Here is this.props.match in Detail", props.match); 
-		console.log("Here is this.props.location in Detail", props.location); 
-		console.log("Here is this.props.history in Detail", props.history); 
+const LanguageDetail = (props) => { 
 	return (
         props.location.pathname === "/french/pronouns" ? <FrenchPronouns /> :
 		props.location.pathname === "/french/ordinal_and_cardinal_numbers" ? <FrenchNumbers /> :

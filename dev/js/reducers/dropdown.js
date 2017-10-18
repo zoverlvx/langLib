@@ -3,10 +3,7 @@ export const initialState = {
 	language: null,
 	partOfSpeech: null
 }
-//main state of the button component
-//displays the dropdown menu when true
-//allows the continuation of the display / the state of
-//<LanguageDetail /> even if the button has been clicked to false
+
 export default (state = initialState, action) => {
 	switch (action.type) {
 		case 'TOGGLE_DROPDOWN':
