@@ -1,8 +1,8 @@
 import React from "react";
-import {Provider} from "react-redux";
 import LanguageBtnCreator from "../js/containers/language-btn-creator";
 import toJson from "enzyme-to-json";
 import {shallow} from "enzyme";
+import {Provider} from "react-redux";
 
 const component = shallow(<Provider><LanguageBtnCreator /></Provider>);
 const tree = toJson(component);
