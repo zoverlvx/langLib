@@ -4,7 +4,7 @@ import toJson from "enzyme-to-json";
 import {shallow} from "enzyme";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
-import reducers from "../js/reducers";
+import reducers from "../../js/reducers/index";
 
 console.log("Here is the store in language-btn-creator.test: ",store); 
 
