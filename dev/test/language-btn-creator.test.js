@@ -3,8 +3,11 @@ import LanguageBtnCreator from "../js/containers/language-btn-creator";
 import toJson from "enzyme-to-json";
 import {shallow} from "enzyme";
 import {Provider} from "react-redux";
+import {createStore} from "redux";
+import reducers from "../js/reducers";
 
-const component = shallow(<Provider><LanguageBtnCreator /></Provider>);
+const store = createStore(reducers);
+const component = shallow(<Provider store={store}><LanguageBtnCreator /></Provider>);
 const tree = toJson(component);
 
 describe("<LanguageBtnCreator />", () => {

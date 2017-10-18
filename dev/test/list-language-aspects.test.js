@@ -4,7 +4,7 @@ import toJson from "enzyme-to-json";
 import {shallow} from "enzyme";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
-import reducers from "../../reducers";
+import reducers from "../js/reducers";
 
 //let component; //then change component in the tests to shallow or mount as needed
 //need to think about whether mount will be used
