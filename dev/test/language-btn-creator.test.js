@@ -6,6 +6,8 @@ import {Provider} from "react-redux";
 import {createStore} from "redux";
 import reducers from "../js/reducers";
 
+console.log("Here is the store in language-btn-creator.test: ",store); 
+
 const store = createStore(reducers);
 const component = shallow(<Provider store={store}><LanguageBtnCreator /></Provider>);
 const tree = toJson(component);
