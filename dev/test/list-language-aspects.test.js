@@ -3,11 +3,13 @@ import ListLanguageAspects from "../js/components/list-language-aspects";
 import toJson from "enzyme-to-json";
 import {shallow} from "enzyme";
 import {Provider} from "react-redux";
+import {createStore} from "redux";
+import reducers from "../../reducers";
 
 //let component; //then change component in the tests to shallow or mount as needed
 //need to think about whether mount will be used
-
-const component = shallow(<Provider><ListLanguageAspects /></Provider>);
+const store = createStore(reducers);
+const component = shallow(<Provider store={store}><ListLanguageAspects /></Provider>);
 const tree = toJson(component);
 
 describe("<ListLanguageAspects />", () => {
