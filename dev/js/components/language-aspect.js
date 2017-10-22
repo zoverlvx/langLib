@@ -1,3 +1,7 @@
+global.requestAnimationFrame = function(callback) {
+  setTimeout(callback, 0);
+};
+
 import React from "react";
 import { changePartOfSpeech } from "../actions";
 import { connect } from "react-redux";

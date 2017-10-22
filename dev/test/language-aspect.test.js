@@ -1,35 +1,48 @@
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+
+global.requestAnimationFrame = function(callback) {
+  setTimeout(callback, 0);
+};
+
+console.log("Here is requestAnimationFrame: ", typeof requestAnimationFrame); 
+
 import React from "react";
 import LanguageAspect from "../js/components/language-aspect";
-import toJson from "enzyme-to-json";
-import {shallow} from "enzyme";
+import {createStore} from "redux";
+import reducers from "../js/reducers";
+import {Provider} from "react-redux";
+import {MemoryRouter as Router, withRouter} from "react-router-dom";
+import sinon from "sinon";
+import {mount} from "enzyme";
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-const component = shallow(<LanguageAspect />);
-const tree = toJson(component);
+configure({ adapter: new Adapter() });
+
+const store = createStore(reducers);
+const component = mount(<Router><Provider store={store}><LanguageAspect /></Provider></Router>);
 
 describe("<LanguageAspect />", () => {
-    const minProps = {
-    	className: "language_aspect",
-    	key: {},
-    	onClick: () => {}
-     	}
+    console.log("Here are the children of LanguageAspect: ", component.children()); 
 
     it("renders 1 <LanguageAspect /> component", () => {
-		console.log(tree); 
         expect(component).toHaveLength(1);
     });
 
-    it("provides a snapshot of LanguageAspect's tree", () => { 
-	    expect(tree).toMatchSnapshot();
-	});
-
-	it("renders props correctly", () => {
-        expect(
-         	shallow(
-         		<LanguageAspect {...minProps} />
-         	).length 
-         ).toEqual(1); 
-     });
 });
+
+//What I think I need to test:
+
+//Does the component return an li?
+//Does the li have a className of language_dropdown?
+//Does it render an onClick attribute?
+//Does the onClick cause a dispatch event of props.dispatch(changePartOfSpeech(props.aspectPath))}? 
+//Does the component render a Link?
+//Does the Link have a to= attribute?
+//Does the to= attribute have its path as `/${props.dropdown}/${props.aspectPath}`?
+//Does the content of the Link have props.item?
+
 
 //What ought to be tested
 

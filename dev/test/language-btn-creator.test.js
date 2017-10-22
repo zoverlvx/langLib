@@ -1,26 +1,53 @@
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+
+global.requestAnimationFrame = function(callback) {
+  setTimeout(callback, 0);
+};
+
 import React from "react";
 import LanguageBtnCreator from "../js/containers/language-btn-creator";
-import toJson from "enzyme-to-json";
-import {shallow} from "enzyme";
+console.log("Flag for LanguageBtnCreator :", LanguageBtnCreator); 
+import {mount} from "enzyme";
+import {MemoryRouter as Router, withRouter} from "react-router-dom";
 import {Provider} from "react-redux";
 import {createStore} from "redux";
-import reducers from "../../js/reducers/index";
+import allReducers from "../js/reducers/index";
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 
-console.log("Here is the store in language-btn-creator.test: ",store); 
+configure({ adapter: new Adapter() });
 
-const store = createStore(reducers);
-const component = shallow(<Provider store={store}><LanguageBtnCreator /></Provider>);
-const tree = toJson(component);
+const store = createStore(allReducers);
+const component = mount(<Router><Provider store={store}><LanguageBtnCreator /></Provider></Router>);
 
-describe("<LanguageBtnCreator />", () => {
+describe("<LanguageBtnCreator />", function() {
 	it("renders 1 <LanguageBtnCreator /> component", () => { 
 		expect(component).toHaveLength(1);
 	});
-
-	it("provides a snapshot of LanguageBtnCreator's tree", () => { 
-		expect(tree).toMatchSnapshot();
+	
+	console.log("Here is LanguageBtnCreator.props: ", component.instance().props.children); 
+	//How do I access the actual children on the Component?
+	console.log("Here is the instance of LanguageBtnCreator: ", component.instance()); 
+	//stateNode: [Circular]... doesn't look good
+	it("renders the buttons", () => {
+	   expect(component.find("div").children()).toHaveLength(6); //why is length 6?
 	});
+
+
 });
+
+//What I think I need to test:
+//the LanguageBtnCreator should have a function of createBtns
+//the function createBtns should return props.languages
+//props.languages should return a component of <LanguageBtn />
+//LanguageBtn should have an attribute of name
+    //name should be equal to language.name
+//LanguageBtn should have an attribute of key
+    //key should be equal to i/a numerical value
+//LanguageBtnCreator should return a div with the content of the function createBtns
+
+
 
 //Do I need some kind of mount logic in my stateful components?
 //https://stackoverflow.com/questions/38710309/when-should-you-use-render-and-shallow-in-enzyme-react-tests

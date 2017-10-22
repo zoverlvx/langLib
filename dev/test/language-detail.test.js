@@ -1,19 +1,22 @@
+import 'core-js/es6/map';
+import 'core-js/es6/set';
+
+global.requestAnimationFrame = function(callback) {
+  setTimeout(callback, 0);
+};
+
 import React from "react";
 import LanguageDetail from "../js/containers/language-detail";
-import toJson from "enzyme-to-json";
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import {shallow} from "enzyme";
 
+configure({ adapter: new Adapter() });
 const component = shallow(<LanguageDetail />);
-const tree = toJson(component);
 
 describe("<LanguageDetail />", () => {
 	it("renders 1 <LanguageDetail /> component", () => { 
-		console.log(tree);
 		expect(component).toHaveLength(1);
-	});
-
-	it("provides a snapshot of LanguageDetail's tree", () => { 
-		expect(tree).toMatchSnapshot();
 	});
 });
 
