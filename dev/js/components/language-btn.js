@@ -8,11 +8,11 @@ import ListLanguageAspects from "./list-language-aspects";
 const LanguageBtn = (props) => {
 	const languagePath = props.name.toLowerCase(); 
 	return (
-		<div className="inline_div">
+		<div className="center inline">
 			<span 
 			className="btn_span"
 			onClick={() => props.toggleDropdown(languagePath)}> 
-				<Link className="btn_link_color"  to={`/${languagePath}`}>{props.name}</Link>
+				<Link className="btn_link"  to={`/${languagePath}`}>{props.name}</Link>
 			</span>
 		{ props.dropdown.open && (props.dropdown.language === languagePath) ? <ListLanguageAspects /> : null }
 		</div>

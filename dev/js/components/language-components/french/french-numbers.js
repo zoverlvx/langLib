@@ -5,14 +5,14 @@ import {withRouter} from "react-router-dom";
 const FrenchNumbers = (props) => (
     <div>
 	    <h2 id="margin_top_bottom">Les nombres</h2>
-		    <div className="list">
+		    <div className="numberlist">
 			    <ul>
 			        <li id="col_head">{props.language[0].numbers.card.name}</li>
 			    </ul>
 		        {props.language[0].numbers.card.nums.map((num, i) => <li key={i}>{num}</li>)}
 	        </div>
 
-	        <div className="list">
+	        <div className="numberlist">
 		        <ul>
 			        <li id="col_head">{props.language[0].numbers.ord.name}</li>
 		        </ul>

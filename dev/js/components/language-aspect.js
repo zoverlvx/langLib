@@ -11,7 +11,7 @@ const LanguageAspect = (props) => {
 	return (	
 		<li className="language_dropdown"  
 		onClick={() => props.dispatch(changePartOfSpeech(props.aspectPath))}>
-		<Link to={`/${props.dropdown}/${props.aspectPath}`}>{props.item}</Link>
+		<Link className="language_dropdown_link" to={`/${props.dropdown}/${props.aspectPath}`}>{props.item}</Link>
 		</li>
 		);
 }

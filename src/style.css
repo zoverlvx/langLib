@@ -1,16 +1,8 @@
-
 * {
   margin: 0em;
   padding: 0em;
   text-decoration: none;
-}
-
-ul {
-  list-style:none;
-}
-
-li {
-  list-style: none;
+  box-sizing: border-box;
 }
 
 body {
@@ -22,37 +14,66 @@ body {
   padding: 10px;
 }
 
+li {
+  list-style: none;
+}
+
 hr {
   width: 80%;
+}
+
+span {
+  text: white;
+}
+
+.wrapper {
+  margin: 10px;
+  padding: 10px;
+  height: 300px;
+  overflow: hidden;  
+}
+
+.center {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+.center.inline {
+  text-align: center;
+}
+
+.btn_link {
+  color: white;
 }
 
 .language_dropdown {
   font-size: 12px;
   border: 1px solid silver;
   padding: 6;
-  background-color: white;
-  //position: absolute;
+  background-color: #ddd;
+  width: 50%;
+  margin:auto;
 }
 
-.btn_link_color {
-  color: white;
+.language_dropdown_link {
+  color: black;
 }
 
 .btn_span {
+  width: 30%;
   display: block;
   cursor: pointer;
   margin-bottom: 2em;
-  background-color: #0033cc;
+  background: #333;
+  border-radius: 5px;
+  color: white;
   font-size: 1.5rem;
   margin: .5rem;
-  padding: 3rem;
+  padding: 3px 8px;
   text-align: center;
-  //position: absolute;
-}
+  margin-left:auto;
+  margin-right:auto;
 
-//this doesn't work
-.btn_span span:hover{
-  background-color: lighten(#0033cc, 5%)
 }
 
 .active_btn {
@@ -60,8 +81,8 @@ hr {
 }
 
 .inline_div {
-  display: inline-block;
   margin: 1em;
+  text-align:center;
 }
 
 #margin_top {
@@ -76,7 +97,9 @@ hr {
   0em 0em 1em 0em;
 }
 
-
+.numberlist li:nth-child(even) {
+  background-color:#ddd;
+}
 
 .list ul:nth-child(odd) {
   background-color:#ddd;

@@ -15,7 +15,7 @@ const LanguageBtnCreator = (props) => {
 		});
 	}
 return (
-		<div>
+		<div className="wrapper">
 		{createBtns()}
 		</div>
 	);
