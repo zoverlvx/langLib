@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 
 const FrenchNumbers = (props) => (
-    <div>
+    <div className="language_detail">
 	    <h2 id="margin_top_bottom">Les nombres</h2>
 		    <div className="numberlist">
 			    <ul>

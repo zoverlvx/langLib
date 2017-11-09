@@ -3,7 +3,7 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 
 const FrenchPronouns = (props) => (
-	<div>
+	<div className="language_detail">
 					<h2 id="margin_top_bottom">{props.language[0].pronouns.name}</h2>
 										
 					<div className="list">

@@ -6,7 +6,7 @@ const FrenchVerbs = (props) => {
     const lImparfait = "L'Imparfait";
     return (
 
-        <div>
+        <div className="language_detail">
 
 	        <h2 id="margin_top_bottom">Les verbes</h2>
 
