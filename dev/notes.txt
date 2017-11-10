@@ -1,1 +1,0 @@
-9/12/2017 - Looking at lifecycle events. Looking at enzyme shallow vs mount vs render. language-detail line 26
