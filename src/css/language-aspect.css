@@ -1,0 +1,10 @@
+.language_dropdown {
+  font-size: 12px;
+  border: 1px solid silver;
+  padding: 6;
+  background-color: #ddd;
+  width: 50%;
+  margin: auto; }
+
+.language_dropdown_link {
+  color: black; }

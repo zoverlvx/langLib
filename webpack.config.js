@@ -17,7 +17,7 @@ module.exports = {
                 exclude: /node_modules/
             },
             {
-                test: /\.sass/,
+                test: /\.sass$/,
                 loader: 'style-loader!css-loader!sass-loader'
             }
         ]
@@ -25,9 +25,9 @@ module.exports = {
     output: {
         path: 'build',
         filename: 'js/bundle.min.js'
-        //publicPath: '/'
+       // publicPath: '/'
     },
-    //devServer: {historyApiFallback: true},
+    // devServer: {historyApiFallback: true},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin()
     ]

@@ -1,0 +1,33 @@
+.language_dropdown {
+  font-size: 12px;
+  border: 1px solid silver;
+  padding: 6;
+  background-color: #ddd;
+  width: 50%;
+  margin: auto; }
+
+.language_dropdown_link {
+  color: black; }
+
+* {
+  margin: 0em;
+  padding: 0em;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+body {
+  background-color: #eee;
+  color: #444;
+  font-family: sans-serif;
+  margin: auto;
+  width: 50%;
+  padding: 10px; }
+
+li {
+  list-style: none; }
+
+hr {
+  width: 80%; }
+
+span {
+  text: white; }

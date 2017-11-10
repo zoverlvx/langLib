@@ -1,4 +1,5 @@
-* {
+//testing sass by taking out the styles of my main tags 
+/* * {
   margin: 0em;
   padding: 0em;
   text-decoration: none;
@@ -25,6 +26,7 @@ hr {
 span {
   text: white;
 }
+*/
 
 .wrapper {
   margin: 10px;
@@ -51,18 +53,18 @@ span {
   color: white;
 }
 
-.language_dropdown {
-  font-size: 12px;
-  border: 1px solid silver;
-  padding: 6;
-  background-color: #ddd;
-  width: 50%;
-  margin:auto;
-}
+//.language_dropdown {
+//  font-size: 12px;
+//  border: 1px solid silver;
+//  padding: 6;
+//  background-color: #ddd;
+//  width: 50%;
+//  margin:auto;
+//}
 
-.language_dropdown_link {
-  color: black;
-}
+//.language_dropdown_link {
+//  color: black;
+//}
 
 .btn_span {
   width: 50%;
