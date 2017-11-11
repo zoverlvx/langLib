@@ -3,11 +3,65 @@
   border: 1px solid silver;
   padding: 6;
   background-color: #ddd;
-  width: 50%;
+  width: 30%;
   margin: auto; }
 
 .language_dropdown_link {
   color: black; }
+
+.center {
+  margin: 10px 0;
+  padding: 30px; }
+
+.inline {
+  text-align: center; }
+
+.btn_span {
+  vertical-align: top;
+  width: 30%;
+  background: #333;
+  border-radius: 5px;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  display: block;
+  cursor: pointer;
+  padding: 3px 8px;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto; }
+
+.btn_link {
+  color: white; }
+
+.wrapper {
+  margin: 10px;
+  padding: 10px;
+  height: 400px;
+  overflow: hidden; }
+
+#margin_top {
+  margin: 1em 0em 0em 0em; }
+
+.language_detail {
+  margin: 10px;
+  padding: 30px; }
+
+#margin_top_bottom {
+  margin: 1em 0em 1em 0em;
+  text-align: center; }
+
+.numberlist {
+  width: 40%;
+  margin-top: 3em;
+  margin-left: auto;
+  margin-right: auto; }
+  .numberlist li:nth-child(even) {
+    background-color: #ddd; }
+
+#col_head {
+  background-color: #444;
+  color: #fff; }
 
 * {
   margin: 0em;

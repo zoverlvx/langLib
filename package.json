@@ -6,7 +6,7 @@
     "build": "webpack",
     "start": "webpack-dev-server",
     "test": "jest --coverage",
-    "sass": "node-sass src/stylesheets -o src/css"
+    "sass": "node-sass src/stylesheets -o src/css --sourcemap"
   },
   "license": "ISC",
   "dependencies": {

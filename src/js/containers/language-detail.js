@@ -21,8 +21,8 @@ const pleaseSelect = () => {
 
 const LanguageDetail = (props) => { 
 	return (
-        props.location.pathname === "/french/pronouns" ? <FrenchPronouns /> :
-		props.location.pathname === "/french/ordinal_and_cardinal_numbers" ? <FrenchNumbers /> :
+            props.location.pathname === "/french/pronouns" ? <FrenchPronouns /> :
+            props.location.pathname === "/french/ordinal_and_cardinal_numbers" ? <FrenchNumbers /> :
 	    props.location.pathname === "/french/regular_verb_conjugations" ? <FrenchVerbs /> : 
 	    props.location.pathname === "/german/pronouns" ? <GermanPronouns /> : 
 	    props.location.pathname === "/german/ordinal_and_cardinal_numbers" ? <GermanNumbers /> : 
