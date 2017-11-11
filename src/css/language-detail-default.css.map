@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "language-detail-default.css",
+	"sources": [
+		"../stylesheets/language-detail-default.sass"
+	],
+	"sourcesContent": [
+		"#margin_top {\n  margin: 1em 0em 0em 0em; }\n\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,WAAW,CAAC;EACV,MAAM,EAAE,eAAe,GAAI"
+}

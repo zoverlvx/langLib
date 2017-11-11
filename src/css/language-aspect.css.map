@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "language-aspect.css",
+	"sources": [
+		"../stylesheets/language-aspect.sass"
+	],
+	"sourcesContent": [
+		".language_dropdown {\n  font-size: 12px;\n  border: 1px solid silver;\n  padding: 6;\n  background-color: #ddd;\n  width: 30%;\n  margin: auto; }\n\n.language_dropdown_link {\n  color: black; }\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,SAAS,EAAE,IAAI;EACf,MAAM,EAAE,gBAAgB;EACxB,OAAO,EAAE,CAAC;EACV,gBAAgB,EAAE,IAAI;EACtB,KAAK,EAAE,GAAG;EACV,MAAM,EAAE,IAAI,GAAI;;AAElB,AAAA,uBAAuB,CAAC;EACtB,KAAK,EAAE,KAAK,GAAI"
+}

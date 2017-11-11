@@ -8,7 +8,6 @@
 
 .numberlist {
   width: 40%;
-  margin-top: 3em;
   margin-left: auto;
   margin-right: auto; }
   .numberlist li:nth-child(even) {
@@ -17,3 +16,5 @@
 #col_head {
   background-color: #444;
   color: #fff; }
+
+/*# sourceMappingURL=language-detail-numbers.css.map */

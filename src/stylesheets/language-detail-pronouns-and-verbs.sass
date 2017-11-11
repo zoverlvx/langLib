@@ -1,0 +1,56 @@
+.list ul
+  &:nth-child(odd)
+    background-color: #ddd
+  &:nth-child(even)
+    background-color: #fff
+/* big */
+@media screen and (min-width: 600px)
+  .list
+    display: table
+    margin-left: auto
+    margin-right: auto
+    ul
+      display: table-row
+      > li
+        display: table-cell
+        padding: .5em .5em
+
+/* small */
+
+@media screen and (max-width: 599px)
+  .list
+    ul
+      border: solid 1px #ccc
+      display: block
+      list-style: none
+      margin: 1em
+      padding: .5em 1em
+      &:first-child
+        display: none
+      > li
+        display: block
+        padding: .25em 0
+      &:nth-child(odd) > li + li
+        border-top: solid 1px #ccc
+      &:nth-child(even) > li + li
+        border-top: solid 1px #eee
+      > li:before
+        color: #000
+        content: attr(data-label)
+        display: inline-block
+        font-size: 75%
+        font-weight: bold
+        text-transform: capitalize
+        vertical-align: top
+        width: 50%
+    p
+      margin: -1em 0 0 50%
+
+/* tiny */
+
+@media screen and (max-width: 349px)
+  .list
+    ul > li:before
+      display: block
+    p
+      margin: 0
