@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
 import {withRouter, Link, Route} from "react-router-dom";
+import Default from "../components/language-components/default";
 import FrenchPronouns from "../components/language-components/french/french-pronouns";
 import FrenchNumbers from "../components/language-components/french/french-numbers";
 import FrenchVerbs from "../components/language-components/french/french-verbs";
@@ -11,17 +12,9 @@ import RussianPronouns from "../components/language-components/russian/russian-p
 import RussianNumbers from "../components/language-components/russian/russian-numbers";
 import RussianVerbs from "../components/language-components/russian/russian-verbs";
 
-const pleaseSelect = () => {
-	return (
-        <div id="margin_top">
-            <h2>Please, select a language.</h2>
-        </div>
-		);
-}
-
 const LanguageDetail = (props) => { 
-	return (
-            props.location.pathname === "/french/pronouns" ? <FrenchPronouns /> :
+    return (
+	    props.location.pathname === "/french/pronouns" ? <FrenchPronouns /> :
             props.location.pathname === "/french/ordinal_and_cardinal_numbers" ? <FrenchNumbers /> :
 	    props.location.pathname === "/french/regular_verb_conjugations" ? <FrenchVerbs /> : 
 	    props.location.pathname === "/german/pronouns" ? <GermanPronouns /> : 
@@ -29,9 +22,8 @@ const LanguageDetail = (props) => {
 	    props.location.pathname === "/german/regular_verb_conjugations" ? <GermanVerbs /> : 
 	    props.location.pathname === "/russian/pronouns" ? <RussianPronouns /> : 
 	    props.location.pathname === "/russian/ordinal_and_cardinal_numbers" ? <RussianNumbers /> : 
-	    props.location.pathname === "/russian/regular_verb_conjugations" ? <RussianVerbs /> : 
-	    props.location.pathname === "/" ? <pleaseSelect /> : null
-		);
+	    props.location.pathname === "/russian/regular_verb_conjugations" ? <RussianVerbs /> : null 
+		); 
 };
 
 function mapStateToProps(state) {

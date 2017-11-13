@@ -32,7 +32,7 @@ describe("<ListLanguageAspects />", () => {
 	   expect(component.find("ul").children()).toHaveLength(3); 
 	});
 	
-	console.log("Here is ListLanguageAspects.prototype: ",ListLanguageAspects.prototype); 
+//	console.log("Here is ListLanguageAspects.prototype: ",ListLanguageAspects.prototype); 
       
       
 //THIS FAILS //should I even be testing this?

@@ -13,7 +13,7 @@ import {createStore, applyMiddleware} from "redux";
 import {BrowserRouter} from "react-router-dom";
 import allReducers from "./reducers";
 import Routes from "./components/routes"
-import {createRoutes} from "./components/routes";
+//import {createRoutes} from "./components/routes";
 require("../stylesheets/index.sass");
 //I do not currently have middleware 
 const mount = document.getElementById("root");

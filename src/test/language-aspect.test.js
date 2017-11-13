@@ -5,7 +5,7 @@ global.requestAnimationFrame = function(callback) {
   setTimeout(callback, 0);
 };
 
-console.log("Here is requestAnimationFrame: ", typeof requestAnimationFrame); 
+//console.log("Here is requestAnimationFrame: ", typeof requestAnimationFrame); 
 
 import React from "react";
 import LanguageAspect from "../js/components/language-aspect";
@@ -14,20 +14,21 @@ import reducers from "../js/reducers";
 import {Provider} from "react-redux";
 import {MemoryRouter as Router, withRouter} from "react-router-dom";
 import sinon from "sinon";
-import {mount} from "enzyme";
+import {shallow, mount} from "enzyme";
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
 const store = createStore(reducers);
-const component = mount(<Router><Provider store={store}><LanguageAspect /></Provider></Router>);
+//const component = mount(<Router><Provider store={store}><LanguageAspect /></Provider></Router>);
 
 describe("<LanguageAspect />", () => {
-    console.log("Here are the children of LanguageAspect: ", component.children()); 
+    //console.log("Here are the children of LanguageAspect: ", component.children()); 
 
     it("renders 1 <LanguageAspect /> component", () => {
-        expect(component).toHaveLength(1);
+        const component = shallow(<LanguageAspect />);
+        expect(component.length).toEqual(1);
     });
 
 });

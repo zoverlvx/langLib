@@ -7,7 +7,7 @@ global.requestAnimationFrame = function(callback) {
 
 import React from "react";
 import LanguageBtnCreator from "../js/containers/language-btn-creator";
-console.log("Flag for LanguageBtnCreator :", LanguageBtnCreator); 
+//console.log("Flag for LanguageBtnCreator :", LanguageBtnCreator); 
 import {mount} from "enzyme";
 import {MemoryRouter as Router, withRouter} from "react-router-dom";
 import {Provider} from "react-redux";
@@ -26,9 +26,9 @@ describe("<LanguageBtnCreator />", function() {
 		expect(component).toHaveLength(1);
 	});
 	
-	console.log("Here is LanguageBtnCreator.props: ", component.instance().props.children); 
-	//How do I access the actual children on the Component?
-	console.log("Here is the instance of LanguageBtnCreator: ", component.instance()); 
+//	console.log("Here is LanguageBtnCreator.props: ", component.instance().props.children); 
+	
+//	console.log("Here is the instance of LanguageBtnCreator: ", component.instance()); 
 	//stateNode: [Circular]... doesn't look good
 	it("renders the buttons", () => {
 	   expect(component.find("div").children()).toHaveLength(6); //why is length 6?
