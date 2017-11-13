@@ -51,15 +51,14 @@ describe("Routes", () => {
     });
 
      it.only("generates a path of /french", () => {
-        //I have no idea how to crack this open
-        let lb = shallow(<LanguageBtn />);
-        console.log("Find a of lb", lb.find("Link").first());
-        //
-        const component = wrapper.find("Route").first();
-        const prop = component.props().path;
-        //expect(prop).toEqual("/french");
-        console.log("Checking wrapper for 2nd Route: ", wrapper.find("Route").get(1));
-        console.log("Checking wrapper for 2nd Route's path prop: ", wrapper.find("Route").at(1).props().path);
+        let wrapper = mount(<Router><Provider store={store}><Routes /></Provider></Router>);
+        // let w = wrapper.find(LanguageBtn).first().props().name;
+        // let w = wrapper.find(LanguageBtn).first().props();
+        let w = wrapper.find(LanguageBtn).first().debug();
+        let component = wrapper.find(LanguageBtn).first().simulate("click");
+        console.log("Debug of LanguageBtn", w);
+        console.log("LanguageBtn", component);  
+        expect(component).toEqual("/french");
 
     });
 
