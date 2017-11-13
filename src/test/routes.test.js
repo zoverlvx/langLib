@@ -8,12 +8,13 @@ global.requestAnimationFrame = function(callback) {
 import React from "react";
 import { shallow, mount } from "enzyme";
 import { configure } from 'enzyme';
-import {MemoryRouter as Router, withRouter} from "react-router-dom";
-import {Provider} from "react-redux";
-import {createStore} from "redux";
+import { MemoryRouter as Router, withRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import { createStore } from "redux";
 import allReducers from "../js/reducers/index";
 import Adapter from 'enzyme-adapter-react-16';
 import Routes from "../js/components/routes";
+import LanguageBtn from "../js/components/language-btn";
 import LanguageBtnCreator from "../js/containers/language-btn-creator";
 
 configure({ adapter: new Adapter() });
@@ -50,7 +51,13 @@ describe("Routes", () => {
     });
 
      it.only("generates a path of /french", () => {
-        wrapper.find(LanguageBtnCreator)
+        //I have no idea how to crack this open
+        let lb = shallow(<LanguageBtn />);
+        console.log("Find a of lb", lb.find("Link").first());
+        //
+        const component = wrapper.find("Route").first();
+        const prop = component.props().path;
+        //expect(prop).toEqual("/french");
         console.log("Checking wrapper for 2nd Route: ", wrapper.find("Route").get(1));
         console.log("Checking wrapper for 2nd Route's path prop: ", wrapper.find("Route").at(1).props().path);
 
