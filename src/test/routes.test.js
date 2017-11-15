@@ -47,27 +47,77 @@ describe("Routes", () => {
     });
 
     it.only("generates a path of /french", () => {
+    const wrapper = mount(<Router><Provider store={store}><Routes /></Provider></Router>);
+    const propsOfRouter = wrapper.find("Router").props();
+    const historyOfRouter = propsOfRouter.history.location.pathname;    
+    console.log("Here's the pathname of Router: ", historyOfRouter);
+
+    const connectedLb = wrapper.find("Connect").at(1);
+    const pathNameOfConnectedLb = connectedLb.props().history.location.pathname
+    console.log("Here is the pathname of French connected LanguageBtn: ", connectedLb.props().history.location.pathname);
     
+    const frenchLanguageBtn = wrapper.find("LanguageBtn").first();
+    const pathNameOfFrenchLb = frenchLanguageBtn.props().history.location.pathname;
+    console.log("Here is the pathname of French Lb: ", pathNameOfFrenchLb);
+   
+    const frenchA = wrapper.find("a").first();
+    console.log("Here is French <a> tag: ", frenchA.debug());
+    frenchA.simulate("click")
+ 
+    //didn't work
+    //const span = wrapper.find("span").first();
+    //console.log("Here is debug of span: ", span.debug());
+    //span.simulate("click");
+    //const Link = wrapper.find("Link").first().simulate("click");
+    console.log("Here are the paths after click of French Link: ");    console.log(historyOfRouter + " " + pathNameOfConnectedLb + " " + pathNameOfFrenchLb);
+
+    expect("/").toEqual("/french");
     });
+  
+
+ /* it.only("generates a path of /french", () => {
+        const wrapper = mount(<Router><Provider store={store}><Routes /></Provider></Router>);
+            
+        const propsOfLink = wrapper.find(LanguageBtn).first().find("Link").props();
+
+        //const propsOfA = wrapper.find(LanguageBtn).first().find("a").props();
+        const debugOfConnectedRoute = wrapper.find("Routes").find("Route").find("Connect").first().debug();
+        console.log("Here is debug of Connect", debugOfConnectedRoute);
+        const connectedLanguageBtn = wrapper.find("Routes").find("Route").find("Connect").first();
+        connectedLanguageBtn.simulate("click");
+        const languageBtn = wrapper.find("Routes").find("Route").find("Connect").find("LanguageBtn").first();
+        const afterClick = languageBtn.simulate("click").props().location.pathname;
+        console.log("Here is after click: ", afterClick);
+        const propsOfLb = languageBtn.props();
+        const lbLocation = propsOfLb.location.pathname;
+        console.log("props of LanguageBtn: ", propsOfLb);
+        console.log("prop location.pathname of connected LanguageBtn", connectedLanguageBtn.props().location.pathname);
+        console.log("pathname of languageBtn w/o click", lbLocation);
+        expect(connectedLanguageBtn.props().location.pathname).toEqual("/french");
+        // console.log("Here are the props of Link: ", propsOfLink);
+        // console.log("Here is the clicked Link: ", clickedLink);
+        
+    });
+*/
 /*
      it.only("generates a path of /french", () => {
        const wrapper = mount(<Router><Provider store={store}><Routes /></Provider></Router>);
         const propsOfLb = wrapper.find(LanguageBtn).first().props();
         const lbPropName = wrapper.find(LanguageBtn).first().props().name;
         const debugOfLb = wrapper.find(LanguageBtn).first().debug();
-        const propsOfLink = wrapper.find(LanguageBtn).first().find("Link").props();
+       // const propsOfLink = wrapper.find(LanguageBtn).first().find("Link").props();
         const linkPropTo = wrapper.find(LanguageBtn).first().find("Link").props().to;
         const propsOfA = wrapper.find(LanguageBtn).first().find("a").props();
         const aPropHref = wrapper.find(LanguageBtn).first().find("a").props().href;
         const clickedLink = wrapper.find(LanguageBtn).first().find("Link").first().simulate("click").props().to;
         const clickedA = wrapper.find(LanguageBtn).first().find("a").first().simulate("click");
         const propsOfRoute = wrapper.find(LanguageBtn).first().find("Route").props();
-        // console.log("Props of Link: ", propsOfLink);        
-        // console.log("Prop To of Link: ", linkPropTo);
-        // console.log("Props of A: ", propsOfA);
-        // console.log("Prop Href of A: ", aPropHref);
-        // console.log("clickedLink: ", clickedLink);
-        // console.log("clickedA: ", clickedA);  
+         console.log("Props of Link: ", propsOfLink);        
+         console.log("Prop To of Link: ", linkPropTo);
+         console.log("Props of A: ", propsOfA);
+         console.log("Prop Href of A: ", aPropHref);
+         console.log("clickedLink: ", clickedLink);
+         console.log("clickedA: ", clickedA);  
         const firstRoute = wrapper.find("Routes").find("Route").at(0).debug();
         const dbOfConnectedRoute = wrapper.find("Routes").find("Route").find("Connect").first().debug();
         const propsOfConnectedRoute = wrapper.find("Routes").find("Route").find("Connect").first().props();
@@ -89,8 +139,7 @@ describe("Routes", () => {
         expect(clickedLink).toEqual("/french");
     });
 */
-    it.only("renders Default component on /", () => {
-        console.log("Here is wrapper.debug", wrapper.debug());
+    it("renders Default component on /", () => {
     });
 
 
