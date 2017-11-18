@@ -18,6 +18,7 @@ describe("<LanguageDetail />", () => {
 	it("renders 1 <LanguageDetail /> component", () => { 
 		expect(component).toHaveLength(1);
 	});
+        it("")
 });
 
 //What ought to be tested

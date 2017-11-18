@@ -1,7 +1,7 @@
-export const TOGGLE_DROPDOWN = "TOGGLE_DROPDOWN";
-export const toggleDropdown = (nextLanguage) => {
+export const CHANGE_LANGUAGE = "CHANGE_LANGUAGE";
+export const changeLanguage = (nextLanguage) => {
 	return {
-		type: TOGGLE_DROPDOWN,
+		type: CHANGE_LANGUAGE,
 		nextLanguage
 	}
 }

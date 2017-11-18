@@ -5,7 +5,8 @@ module.exports = {
     devServer: {
         inline: true,
         contentBase: './src',
-        port: 3000
+        port: 3000,
+        historyApiFallback: true
     },
     devtool: 'cheap-module-eval-source-map',
     entry: './src/js/index.js',
@@ -27,7 +28,6 @@ module.exports = {
         filename: 'js/bundle.min.js'
        // publicPath: '/'
     },
-    // devServer: {historyApiFallback: true},
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin()
     ]

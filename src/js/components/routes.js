@@ -1,5 +1,6 @@
 import React from "react";
-import { Route, Switch } from "react-router";
+import {connect} from "react-redux";
+import { withRouter, Route, Switch } from "react-router";
 import Default from "../components/language-components/default";
 import LanguageBtnCreator from "../containers/language-btn-creator";
 import LanguageDetail from "../containers/language-detail";
@@ -7,7 +8,6 @@ import LanguageDetail from "../containers/language-detail";
 //Switch required if multiple routes used
 
 const Routes = (props) => {
-    console.log(props.children);
 	return (
             <div>
                 <LanguageBtnCreator />
@@ -29,5 +29,12 @@ const Routes = (props) => {
 // 		);
 // }
 
-export default Routes;
+const mapStateToProps = (state) => {
+        return {
+                languages: state.languages,
+                dropdown: state.dropdown
+        }
+}
+
+export default withRouter(connect(mapStateToProps)(Routes));
 
