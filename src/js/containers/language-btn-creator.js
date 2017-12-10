@@ -2,7 +2,6 @@ import React, {Component} from "react";
 import {connect} from "react-redux"; 
 import LanguageBtn from "../components/language-btn";
 
-//technically the languages are coming from a "reducer acting as database"
 const LanguageBtnCreator = (props) => {
 	function createBtns() {
 		return props.languages.map((language, i) => {

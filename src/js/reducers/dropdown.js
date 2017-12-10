@@ -1,5 +1,4 @@
 export const initialState = {
-	open: false,
 	language: null,
 	partOfSpeech: null
 }
@@ -7,30 +6,18 @@ export const initialState = {
 export default (state = initialState, action) => {
     switch (action.type) {
         case 'CHANGE_LANGUAGE':
-            if (state.open && state.language === action.nextLanguage) {
+            if (state.language === action.nextLanguage) {
 		return {
-			open: false,
-			language: action.nextLanguage
+			language: action.nextLanguage,
+                        partOfSpeech: "pronouns"
 			}
             }
-	    if (!state.open && state.language === action.nextLanguage) {
+	    if (state.language !== action.nextLanguage) {
 		return {
-			open: true,
-			language: action.nextLanguage
-			}
-	    }
-	    if (state.open && state.language !== action.nextLanguage) {
-		return {
-			open: true,
-			language: action.nextLanguage
+			language: action.nextLanguage,
+                        partOfSpeech: "pronouns" 
 	                }
             }
-	    if (!state.open && state.language !== action.nextLanguage) {
-		return {
-			open: true,
-			language: action.nextLanguage
-		        } 
-	    }
 	case 'CHANGE_PART_OF_SPEECH':
         	return Object.assign({}, state, {partOfSpeech: action.partOfSpeech})
 		default:

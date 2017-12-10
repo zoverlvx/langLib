@@ -1,7 +1,7 @@
 import React from "react";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
-//fix the style
+
 const RussianNumbers = (props) => (
     <div>				
 		<h2 id="margin_top_bottom">Номера</h2>
@@ -23,7 +23,6 @@ const RussianNumbers = (props) => (
 function mapStateToProps(state) {
 	return {
 		language: state.languages
-		//dropdown: state.dropdown
 	}
 }
 

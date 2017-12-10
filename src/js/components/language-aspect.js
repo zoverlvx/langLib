@@ -19,7 +19,7 @@ const LanguageAspect = (props) => {
 function mapStateToProps(state) {
 	return {
 		dropdown: state.dropdown.language
-		//languages: state.languages
+		
 	}
 }
 

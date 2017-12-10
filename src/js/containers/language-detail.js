@@ -13,11 +13,6 @@ import RussianPronouns from "../components/language-components/russian/russian-p
 import RussianNumbers from "../components/language-components/russian/russian-numbers";
 import RussianVerbs from "../components/language-components/russian/russian-verbs";
 
-// Do I need the same logic as I have in my reducer?
-// Why isn't this logic in my reducer helping my on the frontend?
-
-// Why do I get an infinite loop to begin with? 
-
 class LanguageDetail extends Component {
     constructor(props) {
         super(props);

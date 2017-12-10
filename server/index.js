@@ -5,7 +5,7 @@ import Routes from "../dev/js/components/routes";
 
 const app = express();
 
-app.use(express.static("public")); //what is this doing?
+app.use(express.static("public")); 
 
 app.get("*", (req, res) => {
     res.send(`

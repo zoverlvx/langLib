@@ -143,7 +143,6 @@ const GermanVerbs = (props) => (
 function mapStateToProps(state) {
 	return {
 		language: state.languages
-		//dropdown: state.dropdown
 	}
 }
 
