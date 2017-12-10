@@ -4,7 +4,6 @@ import { withRouter, Link } from "react-router-dom";
 import { toggleDropdown } from "../actions";
 import ListLanguageAspects from "./list-language-aspects";
 
-//isomorphic backend required
 const LanguageBtn = (props) => {
 	const languagePath = props.name.toLowerCase(); 
 	return (
@@ -19,7 +18,6 @@ const LanguageBtn = (props) => {
 	)
 }
 
-//these guys are training wheels
 const mapDispatchToProps = (dispatch) => {
 	return {
 		toggleDropdown: (nextLanguage) => dispatch(toggleDropdown(nextLanguage))

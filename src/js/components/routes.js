@@ -4,7 +4,6 @@ import Default from "../components/language-components/default";
 import LanguageBtnCreator from "../containers/language-btn-creator";
 import LanguageDetail from "../containers/language-detail";
 
-//Switch required if multiple routes used
 
 const Routes = (props) => {
     console.log(props.children);
@@ -20,14 +19,4 @@ const Routes = (props) => {
 		);
 }
 
-// export function createRoutes() {
-// 	return (
-//         <div>
-//             <LanguageBtnCreator />
-//             <Route path="/:language/:partsOfSpeech" component={LanguageDetail} />
-//         </div>
-// 		);
-// }
-
 export default Routes;
-
